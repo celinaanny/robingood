@@ -1,5 +1,5 @@
 class CodePolicy < ApplicationPolicy
-  def create?
+  def show?
     true
   end
 

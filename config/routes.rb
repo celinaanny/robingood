@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   get "/thankyou", to: 'pages#thankyou'
 
-  resources :codes, only: [ :create, :show, :index ]
+  resources :codes, only: [:index]
+  resources :codes, only: [ :show ], param: :access_token
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
