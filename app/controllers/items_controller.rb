@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :set_item, :only [:show, :destroy, :edit, :update]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
-    @items = policy_scope(Item).where(item.user == current_user)
+    @items = policy_scope(Item).where(user: current_user)
   end
 
   def create
