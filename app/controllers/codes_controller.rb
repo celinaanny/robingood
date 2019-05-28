@@ -1,6 +1,10 @@
 class CodesController < ApplicationController
-  skip_before_action :authenticate_user!
+skip_before_action :authenticate_user!, only: [:show]
 
+  def index
+    @codes = policy_scope(Code)
+  end
+    
   def show
     set_code
     @item = Item.find_by(code: @code)
@@ -12,6 +16,6 @@ class CodesController < ApplicationController
   private
 
   def set_code
-    @code = Code.find(params[:id])
+    @code = Code.find(params[:access_token])
   end
 end
