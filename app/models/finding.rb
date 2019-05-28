@@ -4,3 +4,4 @@ class Finding < ApplicationRecord
   validates :address, presence: true
   validates :home, presence: true
 end
+
