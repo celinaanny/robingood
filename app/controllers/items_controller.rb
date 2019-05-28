@@ -2,15 +2,17 @@ class ItemsController < ApplicationController
   before_action :set_item, :only [:show, :destroy, :edit, :update]
 
   def index
-    @items = policy_scope(Item)
+    @items = policy_scope(Item).where(item.user == current_user)
   end
 
   def create
     @item = Item.new(item_params)
+    authorize @item
   end
 
   def new
     @item = Item.new
+    authorize @item
   end
 
   def show; end
@@ -27,6 +29,7 @@ class ItemsController < ApplicationController
 
   def destroy
     @item.destroy
+    authorize @item
     redirect_to items_path
   end
 
