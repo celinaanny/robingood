@@ -1,0 +1,30 @@
+.form-container {
+  margin: 30px auto;
+  width: 50vw;
+}
+
+.form-header {
+  color: white;
+  background-color: $dark-green;
+  width: 100%;
+  text-align: center;
+}
+
+.form-body {
+  background-color: white;
+  padding: 30px;
+  input {
+    border-bottom: 1px solid $light-gray;
+    outline: none;
+    text-decoration: none;
+  }
+}
+
+.form-btn {
+  width: 100%;
+  background-color: $light-green;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+

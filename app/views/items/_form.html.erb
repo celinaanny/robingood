@@ -1,0 +1,14 @@
+<div class="form-container">
+  <div class="form-header">
+    <h3>Edit Item</>
+  </div>
+  <div class="form-body">
+    <%= simple_form_for (item) do |f| %>
+      <%= f.input :name, label: 'Item Name', error: 'Item name is mandatory, please specify one' %>
+      <%= f.input :description, label: 'Item Description' %>
+      <%= f.button :submit, class: "btn form-btn" %>
+    <% end %>
+
+  </div>
+
+</div>
