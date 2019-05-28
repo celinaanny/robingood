@@ -8,20 +8,32 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.user = current_user
+    @item.code = current_user.codes.find_by(code: nil)
     authorize @item
+    if @item.save
+      redirect_to items_path
+    else
+      render :new
+    end
+    counter += 1
   end
 
   def new
     @item = Item.new
+    @item.user = current_user
     authorize @item
   end
 
   def show; end
 
-  def edit; end
+  def edit
+    authorize @item
+  end
 
   def update
-    if @item.update
+    authorize @item
+    if @item.update(item_params)
       redirect_to items_path
     else
       render :edit
@@ -41,4 +53,5 @@ class ItemsController < ApplicationController
   def item_params
     params.require(:item).permit(:name, :description)
   end
+
 end
