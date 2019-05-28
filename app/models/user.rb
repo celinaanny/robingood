@@ -4,6 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
+  after_create :generate_codes
+
   has_many :codes
   has_many :items
+
+  def generate_codes
+    10.times do
+      Code.create(user: self)
+    end
+  end
 end
