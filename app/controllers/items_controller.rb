@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = policy_scope(Item).where(user: current_user)
+    @user = current_user
   end
 
   def create

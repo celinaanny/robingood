@@ -2,16 +2,20 @@
   <h2>
     <i class="fas fa-arrow-left"></i>
   </h2>
-  <div class="items-container">
-    <img src="" alt="">
-  </div>
-  <div>
-    <%= render 'items-card' %>
-  </div>
-  <div>
+  <div class="cards-item">
+    <h4>@ <%= @user.user_name %></h4>
+    <div class="profile-picture">
+      <%= image_tag "mia_ex",
+      class: "avatar-large" %>
+
+      </div>
+    <div>
+      <%= render 'items-card' %>
+    </div>
+    <div>
     <h2>
       <i class="fas fa-plus"></i>
     </h2>
   </div>
-
+  </div>
 </div>

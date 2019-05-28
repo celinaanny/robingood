@@ -1,0 +1,37 @@
+.main-container {
+  margin: 0 auto;
+  max-width: 900px;
+  color: white;
+  padding: 30px;
+}
+
+.cards-item {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+
+.card-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  border-bottom: solid 1px white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h4 {
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.card-details {
+  text-align: left;
+}
+
+.profile-picture {
+  padding: 30px;
+}
