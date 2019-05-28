@@ -1,0 +1,7 @@
+<ul>
+  <% @codes.each do |code| %>
+    <li>
+      <%= code.qrcode.html_safe %>
+    </li>
+  <% end %>
+</ul>
