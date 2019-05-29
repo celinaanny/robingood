@@ -1,0 +1,8 @@
+<h2><%= @item.name %> has been found</h2>
+<p>Your finder has chose <%= @finding.cause.name %></p>
+<p>Please donate to view your item's location</p>
+<%= simple_form_for(@finding) do |f| %>
+  <%= f.input :amount_cents_cents %>
+  <%= f.button :submit, class: "btn btn-form" %>
+<% end %>
+
