@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :findings, only: [:create]
   end
 
-  resources :findings, only: [:show]
+  resources :findings, only: [:show, :update]
 
   get "/thankyou", to: 'pages#thankyou'
 
