@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :addresses
 
   def generate_codes
-    10.times do
+    3.times do
       Code.create(user: self)
     end
   end

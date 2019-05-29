@@ -1,0 +1,11 @@
+<%= simple_form_for @address, :url => addresses_path  do |f| %>
+  <%= f.input :name %>
+  <%= f.input :company_name %>
+  <%= f.input :street %>
+  <%= f.input :postal_code %>
+  <%= f.input :city %>
+  <%= f.input :country, as: :string %>
+  <%= f.button :submit, value:"Add Address", class:"btn btn-primary btn-block" %>
+<% end %>
+<br>
+<br>
