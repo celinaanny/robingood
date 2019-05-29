@@ -15,7 +15,12 @@ class ItemsController < ApplicationController
     authorize @item
   end
 
-  def show; end
+  def show
+    set_item
+    @finding = Finding.where(item: @item).find_by(home: false)
+    authorize @finding
+    authorize @item
+  end
 
   def edit; end
 
@@ -32,6 +37,8 @@ class ItemsController < ApplicationController
     authorize @item
     redirect_to items_path
   end
+
+  private
 
   def set_item
     @item = Item.find(params[:id])
