@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :findings, only: [:show]
 
   get "/thankyou", to: 'pages#thankyou'
-  get "/user/codes", to: 'codes#sendcodes'
+  get "/registration_send_codes", to: 'codes#sendcodes'
 
   resources :disabled_items, only: [:update]
 
