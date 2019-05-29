@@ -2,13 +2,15 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
 
-  resources :items do
+  resources :items, except: [:destroy] do
     resources :findings, only: [:create]
   end
 
   resources :findings, only: [:show]
 
   get "/thankyou", to: 'pages#thankyou'
+
+  get "disable", to: 'items#disable'
 
   resources :codes, only: [:index]
   resources :codes, only: [ :show ], param: :access_token

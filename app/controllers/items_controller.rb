@@ -45,12 +45,6 @@ class ItemsController < ApplicationController
     end
   end
 
-  def destroy
-    @item.destroy
-    authorize @item
-    redirect_to items_path
-  end
-
   private
 
   def set_item
