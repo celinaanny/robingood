@@ -4,4 +4,3 @@ class Finding < ApplicationRecord
   validates :address, presence: true
   monetize :price_cents
 end
-
