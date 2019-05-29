@@ -31,7 +31,12 @@ class ItemsController < ApplicationController
     authorize @item
   end
 
-  def show; end
+  def show
+    set_item
+    @finding = Finding.where(item: @item).find_by(home: false)
+    authorize @finding
+    authorize @item
+  end
 
   def edit
     authorize @item
@@ -45,6 +50,8 @@ class ItemsController < ApplicationController
       render :edit
     end
   end
+
+  private
 
   private
 
