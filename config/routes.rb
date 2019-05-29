@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
   get "/thankyou", to: 'pages#thankyou'
 
-  get "disable", to: 'items#disable'
+  resources :disabled_items, only: [:update]
 
   resources :codes, only: [:index]
   resources :codes, only: [ :show ], param: :access_token

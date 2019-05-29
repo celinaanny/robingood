@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :destroy, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update]
 
   def index
     @items = policy_scope(Item).where(user: current_user).where(disabled: false)
@@ -43,12 +43,6 @@ class ItemsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def disable
-    @item.disable = true
-    authorize @item
-    redirect_to items_path
   end
 
   private
