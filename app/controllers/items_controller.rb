@@ -45,6 +45,12 @@ class ItemsController < ApplicationController
     end
   end
 
+  def disable
+    @item.disable = true
+    authorize @item
+    redirect_to items_path
+  end
+
   private
 
   def set_item
