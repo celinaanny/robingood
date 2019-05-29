@@ -1,8 +1,25 @@
-<h2><%= @item.name %> has been found</h2>
-<p>Your finder has chose <%= @finding.cause.name %></p>
-<p>Please donate to view your item's location</p>
-<%= simple_form_for(@finding) do |f| %>
-  <%= f.input :amount_cents_cents %>
-  <%= f.button :submit, class: "btn btn-form" %>
+<% if @finding.home == false %>
+  <h2><%= @item.name %> has been found</h2>
+  <p>Your finder has chose <%= @finding.cause.name %></p>
+  <p>Please donate to view your item's location</p>
+  <%= simple_form_for(@finding) do |f| %>
+    <%= f.input :amount_cents_cents %>
+    <%= f.button :submit, class: "btn btn-form" %>
+  <% end %>
+<% else %>
+  <h1>Your <%= item.name %> was marked found!</h1>
+  <p>Donation Summary</p>
+  <ul>
+    <li>Cause: <%= @finding.cause.name %></li>
+    <li>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents) %></li>
+  <ul>
+
+  <h1>Item Details</h1>
+  <ul>
+    <li>Location: <%= @finding.address %></li>
+    <li>Details: <%= @finding.message %></li> <% unless @finding.message.nil? %>
+    <li>Dropped off at: <%= @finding.created_at %></li>
+  </ul>
+
 <% end %>
 
