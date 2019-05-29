@@ -1,8 +1,8 @@
 class ItemsController < ApplicationController
-  before_action :set_item, only: [:show, :destroy, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update]
 
   def index
-    @items = policy_scope(Item).where(user: current_user)
+    @items = policy_scope(Item).where(user: current_user).where(disabled: false)
     @user = current_user
   end
 
@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     authorize @item
+    @item.qr_number = current_user.items.count + 1
     if code_id == current_user.codes.last.id + 1
       redirect_to items_path
     else
@@ -43,12 +44,6 @@ class ItemsController < ApplicationController
     else
       render :edit
     end
-  end
-
-  def destroy
-    @item.destroy
-    authorize @item
-    redirect_to items_path
   end
 
   private
