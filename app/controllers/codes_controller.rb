@@ -5,6 +5,11 @@ skip_before_action :authenticate_user!, only: [:show]
     @codes = policy_scope(Code)
   end
 
+  def sendcodes
+    @codes = Code.where(user: current_user)
+    authorize @codes
+  end
+
   def show
     set_code
     @item = Item.find_by(code: @code)

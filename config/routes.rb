@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
 
   resources :items do
@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :findings, only: [:show]
 
   get "/thankyou", to: 'pages#thankyou'
+  get "/user/codes", to: 'codes#sendcodes'
 
   resources :codes, only: [:index]
   resources :codes, only: [ :show ], param: :access_token
