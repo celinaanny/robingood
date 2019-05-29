@@ -10,7 +10,7 @@ class FindingsController < ApplicationController
     authorize @finding
     @finding.amount_cents_cents = finding_params[:amount_cents_cents]
     if @finding.save
-      redirect_to root_path
+      redirect_to new_finding_payment_path(@finding)
     else
       render finding_path(@finding)
     end

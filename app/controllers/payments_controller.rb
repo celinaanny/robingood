@@ -27,6 +27,6 @@ class PaymentsController < ApplicationController
   private
 
   def set_finding
-    @finding = current_user.findings.where(home: false).find(params[:finding_id])
+    @finding = Finding.includes(:item).where(items: { user_id: current_user.id }, state: 'pending').find(params[:finding_id])
   end
 end
