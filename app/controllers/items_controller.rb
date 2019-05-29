@@ -9,14 +9,19 @@ class ItemsController < ApplicationController
   def create
     @item = Item.new(item_params)
     @item.user = current_user
-    @item.code = current_user.codes.find_by(code: nil)
     authorize @item
-    if @item.save
+    if code_id == current_user.codes.last.id + 1
       redirect_to items_path
     else
-      render :new
+
+      @item.code_id = code_id
+
+      if @item.save
+        redirect_to items_path
+      else
+        render :new
+      end
     end
-    counter += 1
   end
 
   def new
@@ -46,12 +51,22 @@ class ItemsController < ApplicationController
     redirect_to items_path
   end
 
+  private
+
   def set_item
     @item = Item.find(params[:id])
   end
 
   def item_params
     params.require(:item).permit(:name, :description)
+  end
+
+  def code_id
+    if current_user.items.first.nil?
+      current_user.codes.first.id
+    else
+      current_user.items.last.code_id + 1
+    end
   end
 
 end
