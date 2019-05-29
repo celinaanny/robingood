@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: 'pages#home'
 
-  resources :items do
+  resources :items, except: [:destroy] do
     resources :findings, only: [:create]
   end
 
@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get "/thankyou", to: 'pages#thankyou'
   get "/user/codes", to: 'codes#sendcodes'
+
+  resources :disabled_items, only: [:update]
 
   resources :codes, only: [:index]
   resources :codes, only: [ :show ], param: :access_token

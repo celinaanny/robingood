@@ -1,13 +1,16 @@
-  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);">
+   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);">
 
-    <div class="container text-center"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.pexels.com/photo/green-pine-tree-leaves-192136/);">
-      <h1>Robin Good</h1>
-      <p>Give Back. Get Back.</p>
-    </div>
+    <div class="container text-center"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); height: 100vh; width: 100vw; url(https://www.pexels.com/photo/green-pine-tree-leaves-192136/);">
 
-    <div class="logo text-center">
-      <%= image_tag "logo_transparent", alt: "Logo", width: 200 %>
-    </div>
+      <div id="homepage-info">
+
+        <h1>Robin Good</h1>
+        <p>Give Back. Get Back.</p>
+
+        <div class="logo text-center">
+        <%= image_tag "logo_transparent", alt: "Logo", width: 350
+         %>
+        </div>
 
     <div class="text-center">
       <% if @user %>

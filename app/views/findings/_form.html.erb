@@ -1,7 +1,7 @@
 <%= simple_form_for [item, finding] do |f| %>
   <%= f.input :address %>
   <%= f.input :message %>
-  <%= f.input :cause_id, collection: [1, 2, 3] %>
+  <%= f.input :cause_id, collection: [1] %>
   <%= f.button :submit %>
 <% end %>
 
