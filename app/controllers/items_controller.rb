@@ -10,6 +10,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     @item.user = current_user
     authorize @item
+    @item.qr_number = current_user.items.count + 1
     if code_id == current_user.codes.last.id + 1
       redirect_to items_path
     else

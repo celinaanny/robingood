@@ -3,4 +3,5 @@ class Item < ApplicationRecord
   belongs_to :user
   has_many :findings, dependent: :destroy
   validates :name, presence: true
+  validates :qr_number, presence: true
 end
