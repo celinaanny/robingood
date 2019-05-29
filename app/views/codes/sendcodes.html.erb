@@ -1,4 +1,10 @@
-<h1>hello</h1>
-<% @codes.each do |code| %>
-<%= code.qrcode %>
-<% end %>
+<div class="container background-white">
+  <h1>Your QR codes</h1>
+  <div class="d-flex justify-content-between">
+    <% @codes.each do |code| %>
+      <div class="qr-code col-lg-6">
+        <%= code.qrcode.html_safe %>
+      </div>
+    <% end %>
+  </div>
+</div>

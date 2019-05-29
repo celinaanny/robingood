@@ -8,6 +8,7 @@ class User < ApplicationRecord
 
   has_many :codes
   has_many :items
+  has_many :addresses
 
   def generate_codes
     10.times do
