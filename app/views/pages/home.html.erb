@@ -1,17 +1,16 @@
-<div class="card-video">
+<div class="card-video ">
   <div class="card-long">
-    <h1>Robin Good</h1>
+    <h1>RobinGood</h1>
     <p>Give Back. Get Back</p>
-    <div>
-      <%= image_tag "logo_transparent.png", alt: "Logo", width: 350
-         %>
+    <div id="logo">
+      <i class="fas fa-feather-alt"></i>
     </div>
     <% if user_signed_in? %>
       <div>
         <%= link_to "My Items", items_path, class: "btn-medium" %>
       </div>
       <div>
-      <%= link_to "Sign Out", destroy_user_session_path, class: "btn-medium" %>
+      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn-medium" %>
       </div>
     <% else %>
       <div>
@@ -24,54 +23,54 @@
   </div>
 
 </div>
-<div class="container">
-  <div class= "row">
-    <div class="col">
-      <div class="card-square">
-        <%= image_tag "logo.png", alt: "Logo", width: 200
-             %>
-        <p>Cause 1</p>
+  <div class="cards-container">
+    <div class= "row">
+      <div class="col">
+        <div class="card-square">
+           <i class="fas fa-qrcode"></i>
+          <p>Step 1: Order QR Codes</p>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card-square">
-        <%= image_tag "logo.png", alt: "Logo", width: 200
-             %>
-        <p>Cause 2</p>
+      <div class="col">
+        <div class="card-square">
+          <i class="fas fa-mobile"></i>
+          <p>Step 2: Place on your item</p>
+        </div>
       </div>
-    </div>
-    <div class="col">
-      <div class="card-square">
-        <%= image_tag "logo.png", alt: "Logo", width: 200
-             %>
-        <p>Cause 3</p>
-      </div>
-    </div>
-  </div>
-  <div class= "row card-causes">
-    <div class="col">
-      <div class="card-square">
-        <%= image_tag "logo.png", alt: "Logo", width: 200
-             %>
-        <p>Cause 1</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card-square">
-        <%= image_tag "logo.png", alt: "Logo", width: 200
-             %>
-        <p>Cause 2</p>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card-square">
-        <%= image_tag "logo.png", alt: "Logo", width: 200
-             %>
-        <p>Cause 3</p>
+      <div class="col">
+        <div class="card-square">
+          <i class="fas fa-grin-hearts"></i>
+          <p>Step 3: Get your item back</p>
+        </div>
       </div>
     </div>
   </div>
-</div>
+  <div class="cards-container card-causes">
+    <div class= "row">
+      <div class="col">
+        <div class="card-square">
+          <%= image_tag "logo.png", alt: "Logo", width: 200
+               %>
+          <p>Cause 1</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-square">
+          <%= image_tag "logo.png", alt: "Logo", width: 200
+               %>
+          <p>Cause 2</p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card-square">
+          <%= image_tag "logo.png", alt: "Logo", width: 200
+               %>
+          <p>Cause 3</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
