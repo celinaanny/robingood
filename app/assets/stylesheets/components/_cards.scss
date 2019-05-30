@@ -1,0 +1,46 @@
+.card-video {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-green;
+  color: white;
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+    h1 {
+      font-size: 70px;
+    }
+    p {
+      font-size: 40px;
+    }
+}
+
+.card-long {
+  text-align: center;
+}
+
+.cards-container {
+  padding: 50px;
+}
+
+.card-square {
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  text-align: center;
+  color: $dark-green;
+    i {
+      font-size: 100px;
+      margin: 10px;
+    }
+
+}
+
+
+.card-causes {
+  background-color: $dark-green;
+}
+
+#logo {
+  font-size: 70px;
+}

@@ -1,8 +1,8 @@
 .main-container {
   margin: 0 auto;
-  max-width: 900px;
   color: white;
   padding: 30px;
+  background: $dark-green;
 }
 
 .cards-item {
@@ -48,4 +48,10 @@
 #hidden-qr-count {
   font-size: 0px;
   visibility: hidden;
+}
+
+.card-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
