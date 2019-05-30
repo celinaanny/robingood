@@ -4,9 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $dark-green;
   color: white;
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/675949/pexels-photo-675949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
     h1 {
       font-size: 70px;
     }
@@ -31,14 +30,18 @@
   color: $dark-green;
     i {
       font-size: 100px;
-      margin: 10px;
+      margin: 30px;
     }
-
+  box-shadow: 0 0 15px rgba(0,0,0,0.2)
 }
 
 
 .card-causes {
   background-color: $dark-green;
+}
+
+.card-how {
+  background-color: white;
 }
 
 #logo {
