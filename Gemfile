@@ -8,6 +8,7 @@ gem 'pg', '~> 0.21'
 gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
+gem 'geocoder'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
@@ -19,7 +20,6 @@ gem 'money-rails'
 gem 'pundit'
 gem 'rqrcode'
 gem 'stripe'
-
 
 group :development do
   gem 'web-console', '>= 3.3.0'

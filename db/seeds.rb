@@ -20,9 +20,9 @@ code_1 = Code.create!(user: paula)
 code_2 = Code.create!(user: paula)
 
 puts "Creating items..."
-phone = Item.create!(user: paula, code: code_1, name: "phone", description: "my most prized posession")
+phone = Item.create!(user: paula, code: code_1, name: "phone", description: "my most prized posession", qr_number: 1)
 
-laptop = Item.create!(user: paula, code: code_2, name: "laptop", description: "my best friend")
+laptop = Item.create!(user: paula, code: code_2, name: "laptop", description: "my best friend", qr_number: 1)
 
 # puts "Creating finding..."
 # Finding.create!(address: "Le Wagon, Berlin", message: "Left your phone with Rich", home: false, item: phone , cause: )

@@ -3,6 +3,8 @@ class FindingsController < ApplicationController
     @finding = Finding.find(params[:id])
     authorize @finding
     @item = @finding.item
+    @markers = { lat: @finding.latitude, lng: @finding.longitude, infoWindow: render_to_string(partial: "infowindow", locals: { finding: @finding })
+}
   end
 
   def update
@@ -33,6 +35,6 @@ class FindingsController < ApplicationController
   private
 
   def finding_params
-    params.require(:finding).permit(:address, :message, :cause_id, :amount_cents_cents)
+    params.require(:finding).permit(:address, :latitude, :longitude, :message, :cause_id, :amount_cents_cents)
   end
 end
