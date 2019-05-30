@@ -8,7 +8,7 @@ class FindingsController < ApplicationController
   def update
     @finding = Finding.find(params[:id])
     authorize @finding
-    @finding.amount_cents_cents = finding_params[:amount_cents_cents]
+    @finding.amount_cents_cents = finding_params[:amount_cents_cents].to_i * 100
     if @finding.save
       redirect_to new_finding_payment_path(@finding)
     else

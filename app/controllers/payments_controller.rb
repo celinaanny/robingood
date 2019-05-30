@@ -1,7 +1,8 @@
 class PaymentsController < ApplicationController
   before_action :set_finding
 
-  def new; end
+  def new
+  end
 
   def create
     customer = Stripe::Customer.create(
@@ -13,7 +14,7 @@ class PaymentsController < ApplicationController
       customer:     customer.id,   # You should store this customer id and re-use it.
       amount:       @finding.amount_cents_cents,
       description:  "Donation to #{@finding.cause.name} for finding #{@finding.id}",
-      currency:     @finding.amount_cents_cents.currency
+      currency:     'EUR'
     )
 
     @finding.update(payment: charge.to_json, state: 'paid')
@@ -28,5 +29,6 @@ class PaymentsController < ApplicationController
 
   def set_finding
     @finding = Finding.includes(:item).where(items: { user_id: current_user.id }, state: 'pending').find(params[:finding_id])
+    authorize @finding
   end
 end

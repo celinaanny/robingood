@@ -2,7 +2,7 @@
 <%= form_tag finding_payments_path(@finding) do %>
   <article>
     <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents) %></span>
+      <span>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents/ 100) %></span>
     </label>
   </article>
 
@@ -12,6 +12,6 @@
     data-email="<%= current_user.email %>"
     data-description="Donation <%= @finding.cause.name %>"
     data-amount="<%= @finding.amount_cents_cents %>"
-    data-currency="<%= @finding.amount_cents_cents.currency %>"></script>
+    ></script>
 
 <% end %>

@@ -7,7 +7,7 @@
     <%= f.button :submit, class: "btn btn-form" %>
   <% end %>
 <% else %>
-  <h1>Your <%= item.name %> was marked found!</h1>
+  <h1>Your <%= @item.name %> was marked found!</h1>
   <p>Donation Summary</p>
   <ul>
     <li>Status: <%= @finding.state %></li>
