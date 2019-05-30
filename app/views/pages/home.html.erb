@@ -1,6 +1,7 @@
-   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);">
-
-    <div class="container text-center"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); height: 100vh; width: 100vw; url(https://www.pexels.com/photo/green-pine-tree-leaves-192136/);">
+   <div class="banner">
+    <%= video_tag "Pexels Videos 1510092.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
+<!--  style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260); background-size: cover; height: 100vh" -->
+    <div class="container text-center">
 
       <div id="homepage-info">
 
@@ -13,12 +14,9 @@
         </div>
 
     <div class="text-center">
-      <% if @user %>
-        <%= link_to "Get started now!", new_item_path, class:"btn btn-info", style:"border-radius: 20px;" %>
-      <% else %>
-        <%= link_to "Get started now!", new_user_registration_path, class:"btn btn-info", style:"border-radius: 20px;" %>
-      <% end %>
-      <%= link_to "Already have a QR code? Activate it now!", new_item_path, class:"btn btn-info", style:"border-radius: 20px;" %>
+      <%= link_to "Sign up", new_user_registration_path, class:"btn btn-info", style:"border-radius: 20px; width: 300px; height: 60px;" %>
+      <br>
+      <%= link_to "Sign in", new_user_session_path, class:"btn btn-info", style:"border-radius: 20px; width: 300px; height: 60px;" %>
     </div>
 
   </div>
