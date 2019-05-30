@@ -38,6 +38,18 @@
 
 .dropdown-toggle:after { content: none }
 
+#create-item-btn {
+  font-size: 0px;
+  visibility: hidden;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#hidden-qr-count {
+  font-size: 0px;
+  visibility: hidden;
+}
+
 .card-menu {
   display: flex;
   flex-direction: column;
