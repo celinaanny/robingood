@@ -1,35 +1,46 @@
-<% if @finding.state == 'pending' %>
-  <h2><%= @item.name %> has been found</h2>
-  <p>Now, it's your time to give back to the community!</p>
-  <p>Your finder has chosen <%= @finding.cause.name %></p>
-  <p>Please donate to view your item's location</p>
-  <%= simple_form_for(@finding) do |f| %>
-    <%= f.input :amount_cents_cents, as: :range, min: 0, max: 20, label: 'Your Donation:' %>
-    <%= f.button :submit, class: "btn btn-form" %>
+<div class="container m-3 mx-auto">
+  <% if @finding.state == 'pending' %>
+    <h2><%= @item.name %> has been found</h2>
+    <h3>Now it's your time to give back to the community!</h3>
+    <p>Your finder has chosen <%= @finding.cause.name %></p>
+    <p>Please donate to view your item's location</p>
+    <%= simple_form_for(@finding) do |f| %>
+      <%= f.input :amount_cents_cents, as: :range, min: 0, max: 20, label: 'Your Donation:' %>
+      <%= f.button :submit, class: "form-btn" %>
+    <% end %>
+
+  <% else %>
+    <h1>Your <%= @item.name %> was marked found!</h1>
+    <br>
+    <br>
+    <div class="d-flex justify-content-between">
+      <div>
+        <h3>Donation Summary</h3>
+        <ul class="list-unstyled p-3">
+          <li><strong>Status:</strong> <%= @finding.state %></li>
+          <li><strong>Cause:</strong> <%= @finding.cause.name %></li>
+          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents_cents / 100) %></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Item Details</h3>
+        <ul class="list-unstyled p-3">
+          <li><i class="fas fa-map-marker-alt mr-2"></i><%= @finding.address.split.map(&:capitalize).join(' ') %></li>
+          <li><i class="fas fa-info-circle mr-2"></i><%= @finding.message unless @finding.message.nil? %></li>
+          <li><i class="fas fa-hourglass-half mr-2"></i> Dropped off at <%= @finding.created_at.strftime("%l:%M %p") %> on <%= @finding.created_at.strftime(" %A, %dth %b %Y") %></li>
+        </ul>
+      </div>
+    </div>
+
+    <%= link_to "Got it back!", items_path, class:"form-btn", style: "width: 120px"%>
+
+    <div
+    id="map"
+    style="width: 100%;
+    height: 600px;"
+    data-markers="<%= @markers.to_json %>"
+    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+    ></div>
   <% end %>
-<% else %>
-  <h1>Your <%= @item.name %> was marked found!</h1>
-  <p>Donation Summary</p>
-  <ul>
-    <li>Status: <%= @finding.state %></li>
-    <li>Cause: <%= @finding.cause.name %></li>
-    <li>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents / 100) %></li>
-  <ul>
-
-  <h1>Item Details</h1>
-  <ul>
-    <li>Location: <%= @finding.address %></li>
-    <li>Details: <%= @finding.message unless @finding.message.nil? %></li>
-    <li>Dropped off at: <%= @finding.created_at.strftime("%A, %d %b %Y %l:%M %p") %></li>
-  </ul>
-
-  <div
-  id="map"
-  style="width: 100%;
-  height: 600px;"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-  ></div>
-
-<% end %>
-
+</div>
