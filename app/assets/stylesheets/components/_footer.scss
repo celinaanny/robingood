@@ -6,6 +6,8 @@
   font-size: 18px;
   text-align: center;
   border-top: solid 1px #EFEFEE;
+  position: sticky;
+  bottom: 0;
 }
 
 .footer-links {
@@ -22,7 +24,8 @@
 }
 
 .footer-links a:hover {
-  opacity: .5;
+  color: #ED3371;
+  opacity: .8;
 }
 .footer .fa-heart {
   color: white;

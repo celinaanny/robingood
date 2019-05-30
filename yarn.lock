@@ -1429,6 +1429,11 @@ boolbase@^1.0.0, boolbase@~1.0.0:
   resolved "https://registry.yarnpkg.com/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
+bootstrap-slider@^10.6.1:
+  version "10.6.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-slider/-/bootstrap-slider-10.6.1.tgz#d9e4b1c327fa4eafc34a52ec01fc4e58b5266889"
+  integrity sha512-lA6SwGr33YcKHtpt0lYjwspc4RCgM2bdrFdHU1U77Lal6gZGjVF/Ii9/Mff0b1dyZ4RvSAzaOlSsuY1d5wCtdA==
+
 bootstrap@^4.3.1:
   version "4.3.1"
   resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-4.3.1.tgz#280ca8f610504d99d7b6b4bfc4b68cec601704ac"
