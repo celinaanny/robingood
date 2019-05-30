@@ -7,12 +7,12 @@
     <%= f.button :submit, class: "btn btn-form" %>
   <% end %>
 <% else %>
-  <h1>Your <%= item.name %> was marked found!</h1>
+  <h1>Your <%= @item.name %> was marked found!</h1>
   <p>Donation Summary</p>
   <ul>
     <li>Status: <%= @finding.state %></li>
     <li>Cause: <%= @finding.cause.name %></li>
-    <li>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents) %></li>
+    <li>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents / 100) %></li>
   <ul>
 
   <h1>Item Details</h1>

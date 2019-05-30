@@ -4,10 +4,10 @@ class FindingPolicy < ApplicationPolicy
   end
 
   def show?
-    true
+    record.item.user == user
   end
 
   def update?
-    true
+    record.item.user == user
   end
 end
