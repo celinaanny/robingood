@@ -1,4 +1,5 @@
 <div class="card-video ">
+  <%= video_tag "Pexels Videos 1510092.mp4", autoplay: :autoplay, loop: :loop, mute: :mute, class: "video" %>
   <div class="card-long">
     <h1>RobinGood</h1>
     <p>Give Back. Get Back</p>
@@ -14,16 +15,16 @@
       </div>
     <% else %>
       <div>
-      <%= link_to "Sign In", new_user_registration_path, class: "btn-medium" %>
+      <%= link_to "Sign In", new_user_session_path, class: "btn-medium" %>
       </div>
       <div>
-      <%= link_to "Sign Up", new_user_session_path, class: "btn-medium" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "btn-medium" %>
       </div>
     <% end %>
   </div>
 
 </div>
-  <div class="cards-container">
+  <div class="cards-container card-how">
     <div class= "row">
       <div class="col">
         <div class="card-square">
@@ -49,22 +50,19 @@
     <div class= "row">
       <div class="col">
         <div class="card-square">
-          <%= image_tag "logo.png", alt: "Logo", width: 200
-               %>
+          <i class="fas fa-heart"></i>
           <p>Cause 1</p>
         </div>
       </div>
       <div class="col">
         <div class="card-square">
-          <%= image_tag "logo.png", alt: "Logo", width: 200
-               %>
+          <i class="fas fa-dog"></i>
           <p>Cause 2</p>
         </div>
       </div>
       <div class="col">
         <div class="card-square">
-          <%= image_tag "logo.png", alt: "Logo", width: 200
-               %>
+          <i class="fas fa-stethoscope"></i>
           <p>Cause 3</p>
         </div>
       </div>
