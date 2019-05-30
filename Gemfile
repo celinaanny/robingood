@@ -18,6 +18,8 @@ gem 'webpacker'
 gem 'money-rails'
 gem 'pundit'
 gem 'rqrcode'
+gem 'stripe'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'

@@ -1,0 +1,17 @@
+<h1>Donation for <%= @finding.cause.name %></h1>
+<%= form_tag finding_payments_path(@finding) do %>
+  <article>
+    <label class="amount">
+      <span>Amount: <%= humanized_money_with_symbol(@finding.amount_cents_cents) %></span>
+    </label>
+  </article>
+
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Donation"
+    data-email="<%= current_user.email %>"
+    data-description="Donation <%= @finding.cause.name %>"
+    data-amount="<%= @finding.amount_cents_cents %>"
+    data-currency="<%= @finding.amount_cents_cents.currency %>"></script>
+
+<% end %>
