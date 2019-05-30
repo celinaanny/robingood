@@ -16,7 +16,11 @@
     <div class="text-center">
       <%= link_to "Sign up", new_user_registration_path, class:"btn btn-info", style:"border-radius: 20px; width: 300px; height: 60px;" %>
       <br>
-      <%= link_to "Sign in", new_user_session_path, class:"btn btn-info", style:"border-radius: 20px; width: 300px; height: 60px;" %>
+      <% if current_user %>
+        <%= link_to "Sign in", new_user_session_path, class:"btn btn-info", style:"border-radius: 20px; width: 300px; height: 60px;" %>
+      <% else %>
+        <%= link_to "Sign in", new_user_session_path, class:"btn btn-info", style:"border-radius: 20px; width: 300px; height: 60px;" %>
+      <% end %>
     </div>
 
   </div>
