@@ -22,9 +22,14 @@
 
 .form-btn {
   width: 100%;
-  background-color: $light-green;
+  background-color: $yellow;
   color: white;
   text-align: center;
   font-size: 18px;
 }
 
+.devices-image img {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
