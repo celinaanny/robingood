@@ -1,0 +1,35 @@
+.footer {
+  background: $dark-green;
+  height: 120px;
+  padding: 0px 50px;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  border-top: solid 1px #EFEFEE;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  padding: 18px 16px;
+}
+
+.footer-links a:hover {
+  opacity: .5;
+}
+.footer .fa-heart {
+  color: white;
+}
+
+.fa-heart:hover {
+  color: red;
+  transform: scale(1.4);
+  transition: transform 140ms linear;
+}
