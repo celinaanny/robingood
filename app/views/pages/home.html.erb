@@ -1,27 +1,77 @@
-   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/192136/pexels-photo-192136.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);">
-
-    <div class="container text-center"style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)); height: 100vh; width: 100vw; url(https://www.pexels.com/photo/green-pine-tree-leaves-192136/);">
-
-      <div id="homepage-info">
-
-        <h1>Robin Good</h1>
-        <p>Give Back. Get Back.</p>
-
-        <div class="logo text-center">
-        <%= image_tag "logo_transparent.png", alt: "Logo", width: 350
+<div class="card-video">
+  <div class="card-long">
+    <h1>Robin Good</h1>
+    <p>Give Back. Get Back</p>
+    <div>
+      <%= image_tag "logo_transparent.png", alt: "Logo", width: 350
          %>
-        </div>
-
-    <div class="text-center">
-      <% if @user %>
-        <%= link_to "Get started now!", new_item_path, class:"btn btn-info", style:"border-radius: 20px;" %>
-      <% else %>
-        <%= link_to "Get started now!", new_user_registration_path, class:"btn btn-info", style:"border-radius: 20px;" %>
-      <% end %>
-      <%= link_to "Already have a QR code? Activate it now!", new_item_path, class:"btn btn-info", style:"border-radius: 20px;" %>
     </div>
-
+    <% if user_signed_in? %>
+      <div>
+        <%= link_to "My Items", items_path, class: "btn-medium" %>
+      </div>
+      <div>
+      <%= link_to "Sign Out", destroy_user_session_path, class: "btn-medium" %>
+      </div>
+    <% else %>
+      <div>
+      <%= link_to "Sign In", new_user_registration_path, class: "btn-medium" %>
+      </div>
+      <div>
+      <%= link_to "Sign Up", new_user_session_path, class: "btn-medium" %>
+      </div>
+    <% end %>
   </div>
+
+</div>
+<div class="container">
+  <div class= "row">
+    <div class="col">
+      <div class="card-square">
+        <%= image_tag "logo.png", alt: "Logo", width: 200
+             %>
+        <p>Cause 1</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-square">
+        <%= image_tag "logo.png", alt: "Logo", width: 200
+             %>
+        <p>Cause 2</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-square">
+        <%= image_tag "logo.png", alt: "Logo", width: 200
+             %>
+        <p>Cause 3</p>
+      </div>
+    </div>
+  </div>
+  <div class= "row card-causes">
+    <div class="col">
+      <div class="card-square">
+        <%= image_tag "logo.png", alt: "Logo", width: 200
+             %>
+        <p>Cause 1</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-square">
+        <%= image_tag "logo.png", alt: "Logo", width: 200
+             %>
+        <p>Cause 2</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card-square">
+        <%= image_tag "logo.png", alt: "Logo", width: 200
+             %>
+        <p>Cause 3</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
