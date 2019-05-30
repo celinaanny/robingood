@@ -10,10 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_29_142100) do
+ActiveRecord::Schema.define(version: 2019_05_29_162139) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.boolean "active_billing"
+    t.boolean "active_shipping"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "postal_code"
+    t.string "city"
+    t.string "street"
+    t.string "company_name"
+    t.string "name"
+    t.string "country"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_addresses_on_user_id"
+  end
 
   create_table "causes", force: :cascade do |t|
     t.string "name"
@@ -38,12 +53,12 @@ ActiveRecord::Schema.define(version: 2019_05_29_142100) do
     t.bigint "cause_id"
     t.bigint "item_id"
     t.integer "amount_cents_cents", default: 0, null: false
-    t.string "amount_cents_currency", default: "EUR", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "home", default: false
     t.float "latitude"
     t.float "longitude"
+    t.jsonb "payment"
+    t.string "state", default: "pending"
     t.index ["cause_id"], name: "index_findings_on_cause_id"
     t.index ["item_id"], name: "index_findings_on_item_id"
   end
@@ -76,6 +91,7 @@ ActiveRecord::Schema.define(version: 2019_05_29_142100) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "addresses", "users"
   add_foreign_key "codes", "users"
   add_foreign_key "findings", "causes"
   add_foreign_key "findings", "items"

@@ -9,6 +9,6 @@ class Code < ApplicationRecord
 
   def qrcode
     qrcode = RQRCode::QRCode.new(url)
-    qrcode.as_svg
+    qrcode.as_svg.html_safe
   end
 end

@@ -1,7 +1,19 @@
 class FindingsController < ApplicationController
   def show
     @finding = Finding.find(params[:id])
+    authorize @finding
     @item = @finding.item
+  end
+
+  def update
+    @finding = Finding.find(params[:id])
+    authorize @finding
+    @finding.amount_cents_cents = finding_params[:amount_cents_cents].to_i * 100
+    if @finding.save
+      redirect_to new_finding_payment_path(@finding)
+    else
+      render finding_path(@finding)
+    end
   end
 
   def create
@@ -21,6 +33,6 @@ class FindingsController < ApplicationController
   private
 
   def finding_params
-    params.require(:finding).permit(:address, :message, :cause_id)
+    params.require(:finding).permit(:address, :message, :cause_id, :amount_cents_cents)
   end
 end

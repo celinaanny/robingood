@@ -3,6 +3,10 @@ class CodePolicy < ApplicationPolicy
     true
   end
 
+  def sendcodes?
+    true
+  end
+
   class Scope < Scope
     def resolve
       scope.where(user: user)
