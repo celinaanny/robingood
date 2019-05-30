@@ -1,7 +1,14 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
-      <div class="form-signup">
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card card-signin flex-row my-5">
+          <div class="card-img-left d-none d-md-flex">
+
+          </div>
+
+
+          <div class="card-body card-signin">
 
         <h2>Sign up</h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -11,24 +18,28 @@
             <%= f.input :email,
                         required: true,
                         autofocus: true,
-                        placeholder: "robin@example.com",
+                        label: false,
+                        placeholder: "enter your email!",
                         input_html: { autocomplete: "email" }%>
             <%= f.input :password,
                         required: true,
-                        placeholder: "******",
+                        label: false,
+                        placeholder: "Put a password!",
                         hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                         input_html: { autocomplete: "new-password" } %>
             <%= f.input :password_confirmation,
+                        label: false,
                         required: true,
-                        placeholder: "******",
+                        placeholder: "Confirm your password once more!",
                         input_html: { autocomplete: "new-password" } %>
-          </div>
+
 
           <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "btn btn-info" %>
+            <%= f.button :submit, "Sign up", class: "tn btn-lg btn-info btn-block text-uppercase" %>
           </div>
         <% end %>
-        <%= render "devise/shared/links" %>
+
+            <%= render "devise/shared/links" %>
 
       </div>
     </div>
