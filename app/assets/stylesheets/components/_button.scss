@@ -1,3 +1,13 @@
 .button {
   border-radius: 20px;
 }
+
+.btn-medium {
+  border-radius: 30px;
+  border: 3px solid white;
+  padding: 5px 40px;
+  color: white;
+  background-color: none;
+  display: inline-block;
+  margin: 20px 0;
+}
