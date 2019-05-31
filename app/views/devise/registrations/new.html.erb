@@ -20,35 +20,35 @@
                         autofocus: true,
                         label: false,
                         placeholder: "first name",
-                        input_html: { autocomplete: "email" }%>
+                        input_html: { autocomplete: "first_name" }%>
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
                         label: false,
                         placeholder: "last name",
-                        input_html: { autocomplete: "email" }%>
+                        input_html: { autocomplete: "last_name" }%>
             <%= f.input :user_name,
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "enter your email!",
-                        input_html: { autocomplete: "email" }%>
+                        placeholder: "pick a username",
+                        input_html: { autocomplete: "user_name" }%>
             <%= f.input :email,
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "enter your email!",
+                        placeholder: "enter your email",
                         input_html: { autocomplete: "email" }%>
             <%= f.input :password,
                         required: true,
                         label: false,
-                        placeholder: "Put a password!",
+                        placeholder: "Enter a password",
                         hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                         input_html: { autocomplete: "new-password" } %>
             <%= f.input :password_confirmation,
                         label: false,
                         required: true,
-                        placeholder: "Confirm your password once more!",
+                        placeholder: "Confirm password",
                         input_html: { autocomplete: "new-password" } %>
 
 
