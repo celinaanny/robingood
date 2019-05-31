@@ -1,3 +1,8 @@
+<div class="main-container">
+<h2><%= link_to (items_path) do %>
+   <i class="fas fa-arrow-left"></i>
+  <% end %></h2>
+
 <div class="form-container", style="background-image: url('camera-contemporary-device-325153.jpg');">
   <div class="devices-image">
     <%= image_tag "camera-contemporary-device-325153.jpg", style:"border-radius: 8px;" %>
@@ -19,4 +24,5 @@
   <p id="hidden-qr-count">
     <%= current_user.items.count + 1 %>
   </p>
+</div>
 </div>
