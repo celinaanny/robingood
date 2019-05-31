@@ -1,4 +1,4 @@
-<div class="container m-3 mx-auto">
+<div class="container background-white my-5 p-5 code-card">
   <% if @finding.state == 'pending' %>
     <h2><%= @item.name %> has been found</h2>
     <h3>Now it's your time to give back to the community!</h3>
@@ -32,10 +32,10 @@
         </ul>
       </div>
     </div>
-
-    <%= link_to "Got it back!", items_path, class:"form-btn", style: "width: 120px"%>
+    <%= link_to "Got it back!", items_path, class:"form-btn w-100"%>
 
     <div
+    class="mt-5"
     id="map"
     style="width: 100%;
     height: 600px;"
