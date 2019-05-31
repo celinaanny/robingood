@@ -22,6 +22,8 @@
                           label: false,
                           placeholder: "last name",
                           input_html: { autocomplete: "email" }%>
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
       <%= f.input :user_name,
                           required: true,
                           autofocus: true,

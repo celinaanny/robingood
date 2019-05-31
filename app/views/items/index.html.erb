@@ -3,8 +3,11 @@
   <div class="cards-item">
     <h4>@ <%= @user.user_name %></h4>
     <div class="profile-picture">
-      <%= image_tag "mia_ex",
-      class: "avatar-large" %>
+      <% if current_user && current_user.photo.file %>
+          <%= cl_image_tag current_user.photo, class: "avatar-large"%>
+        <% else %>
+          <%= cl_image_tag "robin-hood_v2stam", class: "avatar-large"%>
+        <% end %>
       </div>
       <h5>my items</h5>
     <div>
