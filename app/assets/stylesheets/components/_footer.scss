@@ -1,11 +1,11 @@
 .footer {
-  background: $dark-green;
+  background: white;
   height: 120px;
   padding: 0px 50px;
-  color: white;
+  color: $dark-green;
   font-size: 18px;
   text-align: center;
-  border-top: solid 1px #EFEFEE;
+  border-top: solid 1px $dark-green;
   width: 100%;
 }
 
@@ -16,18 +16,17 @@
 
 }
 .footer-links a {
-  color: white;
+  color: $dark-green;
   text-decoration: none;
   font-size: 24px;
   padding: 18px 16px;
 }
 
 .footer-links a:hover {
-  color: #ED3371;
-  opacity: .8;
+  color: rgba( 180, 180, 180, 0.7);
 }
 .footer .fa-heart {
-  color: white;
+  color: $dark-green;
 }
 
 .fa-heart:hover {
