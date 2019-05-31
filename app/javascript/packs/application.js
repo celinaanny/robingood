@@ -14,7 +14,7 @@ initMapbox();
 
 initSweetalert('#sweet-alert-init', {
   title: "Congrats... You're almost done!",
-  text: `Simply take sticker no. ${document.querySelector("#hidden-qr-count").innerHTML.trim()} from your set of stickers and put it on your device. Done?`,
+  text: `Simply take sticker no. ${document.querySelector("#hidden-qr-count").innerHTML.trim()} from your sticker set and stick it onto your item. Done?`,
   icon: "success"
 }, (value) => {
   if (value) {
@@ -33,3 +33,4 @@ sendCongrats('#address-send-congrats', {
     link.click();
   }
 });
+
