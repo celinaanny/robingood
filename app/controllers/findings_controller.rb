@@ -4,7 +4,7 @@ class FindingsController < ApplicationController
     authorize @finding
     @item = @finding.item
     @markers = { lat: @finding.latitude, lng: @finding.longitude, infoWindow: render_to_string(partial: "infowindow", locals: { finding: @finding })
-}
+  }
   end
 
   def update
