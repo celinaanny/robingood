@@ -10,7 +10,7 @@
 
           <div class="card-body card-signin">
 
-        <h2>Sign up</h2>
+        <h2>Create your Robin Good account!</h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
 
@@ -19,13 +19,13 @@
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "enter your email!",
+                        placeholder: "first name",
                         input_html: { autocomplete: "email" }%>
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "enter your email!",
+                        placeholder: "last name",
                         input_html: { autocomplete: "email" }%>
             <%= f.input :user_name,
                         required: true,
