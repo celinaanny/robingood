@@ -5,8 +5,8 @@
     <p>Your finder has chosen <%= @finding.cause.name %></p>
     <p>Please donate to view your item's location</p>
     <%= simple_form_for(@finding) do |f| %>
-      <%= f.input :amount_cents_cents, as: :range, min: 0, max: 20, label: 'Your Donation:' %>
-      <%= f.button :submit, class: "form-btn" %>
+      <%= f.input :amount_cents_cents, as: :range, min: 0.2, max: 20, label: 'Your Donation: (0.2 - 20 EUR)' %>
+      <%= f.button :submit, "Donate", class: "form-btn" %>
     <% end %>
 
   <% else %>
