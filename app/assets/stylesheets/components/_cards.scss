@@ -12,6 +12,9 @@
     p {
       font-size: 40px;
     }
+    a {
+      font-size: 30px;
+    }
 }
 
 .card-long {
@@ -23,11 +26,15 @@
 }
 
 .card-square {
+  border-radius: 5px;
   padding: 20px;
   margin: 20px;
   background: white;
   text-align: center;
   color: $dark-green;
+    p {
+      font-size: 30px;
+    }
     i {
       font-size: 100px;
       margin: 30px;
@@ -38,6 +45,9 @@
 
 .card-causes {
   background-color: $dark-green;
+  h3 {
+    color: white;
+  }
 }
 
 .card-how {
@@ -46,4 +56,11 @@
 
 #logo {
   font-size: 70px;
+}
+
+.header-info {
+  text-align: center;
+  h3 {
+    margin-bottom: 30px;
+  }
 }
