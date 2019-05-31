@@ -8,10 +8,9 @@
 
 # Finding.destroy_all
 
-Cause.create!(name: "Celina's hospital for abused puppy pals", image: "https://images.pexels.com/photos/1663421/pexels-photo-1663421.jpeg", description: "")
-Cause.create!(name: "Stephan's centre for traumatized coders", image: "https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg", description: "")
-Cause.create!(name: "Mia's centre for unrequited love rehab", image: "https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg", description: "")
+Cause.create!(name: "Celina's hospital for abused puppy pals", image: "https://images.pexels.com/photos/1663421/pexels-photo-1663421.jpeg", description: "Good")
+Cause.create!(name: "Stephan's centre for traumatized coders", image: "https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg", description: "Good")
+Cause.create!(name: "Mia's centre for unrequited love rehab", image: "https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg", description: "Good")
 
 # puts "Creating finding..."
 # Finding.create!(address: "Le Wagon, Berlin", message: "Left your phone with Rich", home: false, item: phone , cause: )
-Celina's dog hospital
