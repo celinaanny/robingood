@@ -11,9 +11,11 @@
   display: inline-block;
   margin: 20px 0;
   font-weight: bold;
+    &:hover {
+      color: $dark-green;
+      background-color: white;
+      text-decoration: none;
+    }
 }
 
-.btn-medium:hover {
-  text-decoration: none;
-  color: white;
-}
+
