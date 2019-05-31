@@ -5,7 +5,10 @@
 
 .form-header {
   color: white;
-  background-color: $dark-green;
+  background-color: #ED3371;
+  padding: 14px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   width: 100%;
   text-align: center;
 }
@@ -22,11 +25,22 @@
 
 .form-btn {
   width: 100%;
-  background-color: $yellow;
+  background-color: #406D32;
   color: white;
   text-align: center;
   font-size: 18px;
+  padding: 8px 40px;
+  border-radius: 20px;
+  font-family: "Poppins", "sans-serif";
+  font-weight: 500;
+  text-decoration: none;
 }
+.form-btn:hover {
+  text-decoration: none;
+  color: white;
+}
+
+
 
 .devices-image img {
   width: 100%;

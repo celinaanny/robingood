@@ -10,7 +10,7 @@
     <%= stylesheet_pack_tag 'application', media: 'all' %>
   </head>
   <body>
-    <% unless action_name== "home" || action_name == "thankyou" %>
+    <% unless action_name == "home" || action_name == "thankyou" %>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>

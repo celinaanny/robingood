@@ -1,6 +1,6 @@
-<div class="form-container">
+<div class="form-container", style="background-image: url('camera-contemporary-device-325153.jpg');">
   <div class="devices-image">
-    <%= image_tag "camera-contemporary-device-325153.jpg" %>
+    <%= image_tag "camera-contemporary-device-325153.jpg", style:"border-radius: 8px;" %>
   </div>
   <div class="form-header">
     <h3>New Item</h3>
@@ -12,7 +12,7 @@
       <%= f.input :description, label: 'Item Description', placeholder:"Kindle Paperwhite, newest edition" %>
       <%= f.button :submit, class: "pt-0 pb-0 hidden", id:"create-item-btn" %>
     <% end %>
-    <button class="btn btn-info" id="sweet-alert-init">
+    <button class="form-btn" id="sweet-alert-init">
       Continue
     </button>
   </div>
