@@ -1,3 +1,11 @@
-<%= link_to <i class="fas fa-arrow-left"></i>, items_path %>
-<%= render 'form', item: @item %>
+<div class="main-container">
+
+  <h2><%= link_to (items_path) do %>
+     <i class="fas fa-arrow-left"></i>
+    <% end %></h2>
+
+
+
+  <%= render 'form', item: @item %>
+</div>
 
