@@ -2,7 +2,7 @@
   background-color: white
 }
 
-.qr-code svg {
+.qr-sendpage-size svg {
   height: 200px;
   width: 200px;
 }
@@ -24,4 +24,15 @@
   border-left-style: solid;
   border-left-color: lightgrey;
   border-left-width: 1px;
+}
+
+.qr-img svg {
+  height: 120px;
+  width: 120px;
+}
+
+.qr-img {
+  width: 120px;
+  margin-left: 20px;
+  margin-right: 20px;
 }

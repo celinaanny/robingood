@@ -16,6 +16,22 @@
         <i class="fas fa-plus"></i>
       <% end %>
     </h2>
+    <div>
+      <% if @user.codes.last.item %>
+        <h5 class="mt-5 mb-3">Sorry mate, you have no QR codes left. Order new ones</h5>
+      <% else %>
+        <h5 class="mt-5 mb-3">Free QR codes you can still assign</h5>
+      <% end %>
+      <div class="d-flex justify-content-center">
+      <% @user.codes.each do |code| %>
+        <% if code.item.nil? %>
+          <div class="qr-code qr-img">
+            <%= code.qrcode %>
+          </div>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
   </div>
   </div>
 </div>
