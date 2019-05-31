@@ -1,4 +1,6 @@
 class FindingsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:create]
+
   def show
     @finding = Finding.find(params[:id])
     authorize @finding
@@ -19,7 +21,6 @@ class FindingsController < ApplicationController
   end
 
   def create
-    skip_authorization
     @item = Item.find(params[:item_id])
     @finding = Finding.new(finding_params)
     @finding.item = @item
