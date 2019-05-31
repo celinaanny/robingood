@@ -8,7 +8,7 @@ class AddressesController < ApplicationController
     authorize @address
     @codes = Code.where(user: current_user)
     if @address.save
-      redirect_to sent_confirmation_path
+      redirect_to items_path
     else
       render "codes/sendcodes"
     end

@@ -55,3 +55,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+#hidden-address-btn {
+  visibility: hidden;
+  font-size: 0px;
+}

@@ -1,10 +1,15 @@
 <div class="container background-white">
+  <br>
   <h1 class="text-center">Your QR codes</h1>
-  <div class="d-flex justify-content-around my-5">
-    <% @codes.each do |code| %>
+  <div class="d-flex justify-content-around my-5 qr-borders">
+    <% @codes.sort.each do |code| %>
       <div class="qr-code col-lg-3">
         <%= code.qrcode %>
       </div>
+      <% if code != code.user.codes.last %>
+        <div class="seperator">
+        </div>
+      <% end %>
     <% end %>
   </div>
   <h2 class="text-center">Which address would you like us to send your QR codes to?</h2>

@@ -5,7 +5,10 @@
   <%= f.input :postal_code %>
   <%= f.input :city %>
   <%= f.input :country, as: :string %>
-  <%= f.button :submit, value:"Add Address", class:"btn btn-primary btn-block" %>
+  <%= f.button :submit, value:"Add Address", id:"hidden-address-btn" %>
 <% end %>
+  <button class="form-btn" id="address-send-congrats">
+    Add Address
+  </button>
 <br>
 <br>

@@ -20,6 +20,7 @@ gem 'money-rails'
 gem 'pundit'
 gem 'rqrcode'
 gem 'stripe'
+gem 'sweetalert-rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
