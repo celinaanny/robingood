@@ -1,8 +1,8 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: $dark-green;
-  color: white;
-  border-bottom: 1px solid white;
+  background: white;
+  color: $dark-green;
+  border-bottom: 1px solid $dark-green;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -11,7 +11,7 @@
 
 .navbar-lewagon .navbar-brand {
   width: 40px;
-  color: white;
+  color: $dark-green;
   text-decoration: none;
     &:hover {
       color: gray;

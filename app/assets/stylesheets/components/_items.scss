@@ -1,8 +1,8 @@
 .main-container {
   margin: 0 auto;
-  color: white;
+  color: $dark-green;
   padding: 30px;
-  background: $dark-green;
+  background: white;
 }
 
 .cards-item {
@@ -15,7 +15,7 @@
   display: flex;
   justify-content: space-between;
   align-items: top;
-  border-bottom: solid 1px white;
+  border-bottom: solid 1px $dark-green;
   padding-top: 20px;
   padding-bottom: 20px;
   h4 {
