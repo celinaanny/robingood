@@ -19,6 +19,7 @@ class FindingsController < ApplicationController
   end
 
   def create
+    skip_authorization
     @item = Item.find(params[:item_id])
     @finding = Finding.new(finding_params)
     @finding.item = @item
