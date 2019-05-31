@@ -44,3 +44,7 @@
   padding-top: 150px;
   padding-bottom: 150px;
 }
+
+#main-content {
+  min-height: calc(100vh - 200px);
+}
