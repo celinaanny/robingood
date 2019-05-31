@@ -7,22 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Finding.destroy_all
-Item.destroy_all
-Code.destroy_all
-User.destroy_all
 
-puts "Creating users..."
-paula = User.create!(first_name: "Paula", last_name: "Gold", user_name: "pgold", password: "123456", email: "pgold@example.com")
-
-puts "Creating codes..."
-code_1 = Code.create!(user: paula)
-
-code_2 = Code.create!(user: paula)
-
-puts "Creating items..."
-phone = Item.create!(user: paula, code: code_1, name: "phone", description: "my most prized posession", qr_number: 1)
-
-laptop = Item.create!(user: paula, code: code_2, name: "laptop", description: "my best friend", qr_number: 1)
+Cause.create!(name: "Celina's hospital for abused puppy pals", image: "https://images.pexels.com/photos/1663421/pexels-photo-1663421.jpeg", description: "")
+Cause.create!(name: "Stephan's centre for traumatized coders", image: "https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg", description: "")
+Cause.create!(name: "Mia's centre for unrequited love rehab", image: "https://images.pexels.com/photos/7111/couch-conference-startup-bro-concentration.jpg", description: "")
 
 # puts "Creating finding..."
 # Finding.create!(address: "Le Wagon, Berlin", message: "Left your phone with Rich", home: false, item: phone , cause: )
+Celina's dog hospital

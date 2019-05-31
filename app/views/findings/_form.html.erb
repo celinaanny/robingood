@@ -1,7 +1,7 @@
 <%= simple_form_for [item, finding] do |f| %>
   <%= f.input :address, placeholder: "Vapiano, Berliner-Allee, Berlin, Germany" %>
   <%= f.input :message, label: "Details", placeholder: "Details, e.g. with whom you left the item" %>
-  <%= f.input :cause_id, collection: [1, 2, 3] %>
+  <%= f.input :cause_id, collection: ["Celina's hospital for abused puppy pals", "Stephan's centre for traumatized coders", "Mia's centre for unrequited love rehab"] %>
   <%= f.button :submit,"Submit", class:"form-btn" %>
 <% end %>
 
