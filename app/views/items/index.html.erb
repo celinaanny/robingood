@@ -6,21 +6,21 @@
       <%= image_tag "mia_ex",
       class: "avatar-large" %>
       </div>
-      <h5>My Items</h5>
+      <h5>my items</h5>
     <div>
       <%= render 'items-card' %>
     </div>
     <div>
-    <h2>
+    <h1>
       <%= link_to new_item_path do %>
-        <i class="fas fa-plus"></i>
+        <i class="fas fa-plus-circle"></i>
       <% end %>
-    </h2>
+    </h1>
     <div>
       <% if @user.codes.last.item %>
         <h5 class="mt-5 mb-3">Sorry mate, you have no QR codes left. Order new ones</h5>
       <% else %>
-        <h5 class="mt-5 mb-3">Free QR codes you can still assign</h5>
+        <h5 class="mt-5 mb-3">unassigned QR codes</h5>
       <% end %>
       <div class="d-flex justify-content-center">
       <% @user.codes.each do |code| %>
