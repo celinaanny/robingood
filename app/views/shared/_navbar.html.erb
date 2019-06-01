@@ -17,6 +17,7 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown mr-5">
             <i class="fas fa-bell dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+            <i class="fas fa-bullseye hidden"></i>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <% current_user.items.each do |item| %>
                 <% item.findings.each do |finding| %>
@@ -35,7 +36,6 @@
           <% if user_signed_in? %>
             <li class="nav-item dropdown">
                 <i class="fas fa-bars dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-                <i class="fas fa-bullseye"></i>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 <%= link_to "Update account", edit_user_registration_path, class: "dropdown-item" %>
                 <%= link_to "My items", items_path, class: "dropdown-item" %>
