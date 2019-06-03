@@ -31,7 +31,7 @@ class FindingsController < ApplicationController
       UserMailer.with(user: @item.user).found.deliver_now
       redirect_to thankyou_path
     else
-      render code_path(@code)
+      render code_path(@code.access_token)
     end
   end
 
