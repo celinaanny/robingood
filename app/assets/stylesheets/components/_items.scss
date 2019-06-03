@@ -8,8 +8,11 @@
 
 .cards-item {
   margin: 0 auto;
-  width: 50%;
+  width: 90%;
   text-align: center;
+  @include media-breakpoint-up(sm) {
+   width: 50%;
+  }
 }
 
 .card-item {
