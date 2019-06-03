@@ -28,6 +28,7 @@ class FindingsController < ApplicationController
     authorize @finding
     if @finding.save
       flash[:notice] = "You sucessfully submitted the location for #{@item.name}."
+      UserMailer.with(user: @item.user).found.deliver_now
       redirect_to thankyou_path
     else
       render code_path(@code)

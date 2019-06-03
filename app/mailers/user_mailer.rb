@@ -8,4 +8,9 @@ class UserMailer < ApplicationMailer
     @user = params[:user]
     mail(to: @user.email, subject: 'Welcome to RobinGood')
   end
+
+  def found
+    @user = params[:user]
+    mail(to: @user.email, subject: 'Your item was found')
+  end
 end
