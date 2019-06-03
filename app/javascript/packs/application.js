@@ -7,7 +7,7 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initSweetalert } from './sweetalert';
 import { sendCongrats } from "./congrats_popup";
 import { initAutocomplete } from '../plugins/init_autocomplete';
-
+import './notification';
 
 addAttributesToQRCode();
 initAutocomplete();

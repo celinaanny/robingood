@@ -1,4 +1,4 @@
-<%= simple_form_for [item, finding] do |f| %>
+<%= simple_form_for [item, finding], html: { class: "form-finding"} do |f| %>
   <%= f.input :address, placeholder: "Vapiano, Berliner-Allee, Berlin, Germany" %>
   <%= f.input :message, label: "Details", placeholder: "Details, e.g. with whom you left the item" %>
   <%= f.input :cause_id, collection: Cause.all %>
