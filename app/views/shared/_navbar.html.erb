@@ -17,13 +17,23 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown mr-5">
             <i class="fas fa-bell dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <i class="fas fa-bullseye hidden"></i>
+            <% current_user.items.each do |item| %>
+              <% item.findings.each do |finding| %>
+                <% if finding.state == "pending" %>
+                  <i class="fas fa-bullseye"></i>
+                <% end %>
+              <% end %>
+            <% end %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <% current_user.items.each do |item| %>
                 <% item.findings.each do |finding| %>
-                  <% if finding.state == "pending" %>
-                    <%= link_to finding_path(finding), class: "dropdown-item" do %>
-                      <p>Your <%= item.name %> has been found!</p>
+                  <% if finding %>
+                    <% if finding.state == "pending" %>
+                      <%= link_to finding_path(finding), class: "dropdown-item" do %>
+                        <p>Your <%= item.name %> has been found!</p>
+                      <% end %>
+                    <% else %>
+                      <p class="dropdown-item">No new notifications</p>
                     <% end %>
                   <% else %>
                     <p class="dropdown-item">No new notifications</p>
