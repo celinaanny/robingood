@@ -10,12 +10,12 @@ class PaymentsController < ApplicationController
       email:  params[:stripeEmail]
     )
 
-    charge = Stripe::Charge.create(
+    charge = Stripe::Charge.create({
       customer:     customer.id,   # You should store this customer id and re-use it.
-      amount:       @finding.amount_cents_cents,
+      amount:       (@finding.amount_cents_cents / 100 ).to_f,
       description:  "Donation to #{@finding.cause.name} for finding #{@finding.id}",
-      currency:     'EUR'
-    )
+      currency:     'eur'
+    })
 
     @finding.update(payment: charge.to_json, state: 'paid')
     redirect_to finding_path(@finding)

@@ -6,9 +6,9 @@
     <p>Please donate to view your item's location</p>
 
     <%= simple_form_for(@finding) do |f| %>
-      <%= f.input :amount_cents_cents, label: "Your Donation:", placeholder: 5 %>
+      <%= f.input :amount_cents_cents, label: "Your Donation:", placeholder: "5" %>
+      <%= f.button :submit, "Donate", class: "form-btn" %>
     <% end %>
-
 
   <% else %>
     <h1>Your <%= @item.name %> was marked found!</h1>
@@ -20,7 +20,7 @@
         <ul class="list-unstyled p-3">
           <li><strong>Status:</strong> <%= @finding.state %></li>
           <li><strong>Cause:</strong> <%= @finding.cause.name %></li>
-          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents_cents / 100) %></li>
+          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents_cents) %></li>
         </ul>
       </div>
 
