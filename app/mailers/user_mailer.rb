@@ -11,6 +11,7 @@ class UserMailer < ApplicationMailer
 
   def found
     @user = params[:user]
+    @finding = params[:finding]
     mail(to: @user.email, subject: 'Your item was found')
   end
 end
