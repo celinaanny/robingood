@@ -12,7 +12,7 @@ class PaymentsController < ApplicationController
 
     charge = Stripe::Charge.create({
       customer:     customer.id,   # You should store this customer id and re-use it.
-      amount:       (@finding.amount_cents_cents / 100 ).to_f,
+      amount:       @finding.amount_cents_cents.to_i,
       description:  "Donation to #{@finding.cause.name} for finding #{@finding.id}",
       currency:     'eur'
     })

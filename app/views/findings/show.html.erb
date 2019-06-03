@@ -20,7 +20,7 @@
         <ul class="list-unstyled p-3">
           <li><strong>Status:</strong> <%= @finding.state %></li>
           <li><strong>Cause:</strong> <%= @finding.cause.name %></li>
-          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents_cents) %></li>
+          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents) %></li>
         </ul>
       </div>
 
