@@ -5,19 +5,10 @@
     <p>Your finder has chosen the cause <%= @finding.cause.name %></p>
     <p>Please donate to view your item's location</p>
 
-    <form class="simple_form edit_finding" id="edit_finding_4" novalidate="novalidate" action="" accept-charset="UTF-8" method="post">
-      <input name="utf8" type="hidden" value="✓">
-      <input type="hidden" name="_method" value="patch">
-      <input type="hidden" name="authenticity_token" value="@finding.item.code">
-          <div class="form-group range optional finding_amount_cents_cents form-group-valid">
-            <label class="range optional" for="finding_amount_cents_cents">Your Donation: (1 - 20 EUR)</label>
-            <div class="d-flex">
-              <input class="form-control-range is-valid numeric range optional w-50" type="range" step="0.5" value="" max="20" min="1" name="finding[amount_cents_cents]" id="finding_amount_cents_cents">
-               <p class="ml-5"><em>Current Value:</em> <%= @finding.amount_cents_cents / 100 %></p>
-            </div>
-          </div>
-          <input type="submit" name="commit" value="Donate" class="btn form-btn" data-disable-with="Donate">
-    </form>
+    <%= simple_form_for(@finding) do |f| %>
+      <%= f.input :amount_cents_cents, label: "Your Donation:", placeholder: 5 %>
+    <% end %>
+
 
   <% else %>
     <h1>Your <%= @item.name %> was marked found!</h1>
