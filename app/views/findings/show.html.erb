@@ -2,10 +2,11 @@
   <% if @finding.state == 'pending' %>
     <h2><%= @item.name %> has been found</h2>
     <h3>Now it's your time to give back to the community!</h3>
-    <p>Your finder has chosen <%= @finding.cause.name %></p>
+    <p>Your finder has chosen the cause <%= @finding.cause.name %></p>
     <p>Please donate to view your item's location</p>
+
     <%= simple_form_for(@finding) do |f| %>
-      <%= f.input :amount_cents_cents, as: :range, min: 0.2, max: 20, label: 'Your Donation: (0.2 - 20 EUR)' %>
+      <%= f.input :amount_cents_cents, label: "Your Donation:", placeholder: "5" %>
       <%= f.button :submit, "Donate", class: "form-btn" %>
     <% end %>
 
@@ -19,7 +20,7 @@
         <ul class="list-unstyled p-3">
           <li><strong>Status:</strong> <%= @finding.state %></li>
           <li><strong>Cause:</strong> <%= @finding.cause.name %></li>
-          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents_cents / 100) %></li>
+          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents) %></li>
         </ul>
       </div>
 

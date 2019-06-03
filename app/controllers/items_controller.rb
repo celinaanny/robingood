@@ -7,6 +7,9 @@ class ItemsController < ApplicationController
   end
 
   def create
+    if current_user.items.nil?
+      puts "Did your QR code arrive yet?"
+    end
     @item = Item.new(item_params)
     @item.user = current_user
     authorize @item

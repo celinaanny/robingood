@@ -30,7 +30,7 @@ if (document.querySelector("#address-send-congrats")) {
 if (document.querySelector("#hidden-qr-count")) {
   initSweetalert('#sweet-alert-init', {
     title: "Congrats... You're almost done!",
-    text: `Simply take sticker no. ${ document.querySelector("#hidden-qr-count").innerHTML.trim() } from your sticker set and stick it onto your item. Done?`,
+    text: `Simply peel sticker no. ${ document.querySelector("#hidden-qr-count").innerHTML.trim() } off your sticker set and stick it onto your item. Done?`,
     icon: "success"
   }, (value) => {
     if (value) {
