@@ -1,7 +1,55 @@
 <%= simple_form_for [item, finding], html: { class: "form-finding"} do |f| %>
   <%= f.input :address, placeholder: "Vapiano, Berliner-Allee, Berlin, Germany" %>
   <%= f.input :message, label: "Details", placeholder: "Details, e.g. with whom you left the item" %>
-  <%= f.input :cause_id, collection: Cause.all %>
+
+  <div class="checkboxes">
+    <fieldset class="form-group check_boxes optional finding_cause_id">
+      <legend class="col-form-label pt-0">Cause</legend>
+      <input type="hidden" name="finding[cause_id][]" value="">
+      <div class="row">
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input check_boxes optional" type="checkbox" value="1" name="finding[cause_id][]" id="finding_cause_id_1">
+            <label id='label-1' class="collection_check_boxes" for="finding_cause_id_1">
+              <i class="fas fa-heart"></i>
+              <p>Celina's hospital for abused puppy pals</p>
+            </label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input check_boxes optional" type="checkbox" value="2" name="finding[cause_id][]" id="finding_cause_id_2">
+            <label id='label-2' class="collection_check_boxes" for="finding_cause_id_2">
+              <i class="fas fa-dog"></i>
+              <p>Stephan's centre for traumatized coders</p>
+            </label>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-check">
+            <input class="form-check-input check_boxes optional" type="checkbox" value="3" name="finding[cause_id][]" id="finding_cause_id_3">
+            <label id='label-3' class="collection_check_boxes" for="finding_cause_id_3">
+              <i class="fas fa-stethoscope"></i>
+              <p>Mia's centre for unrequited love rehab</p>
+            </label>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+
   <%= f.button :submit,"Submit", class:"form-btn" %>
 <% end %>
 
+<script type="text/javascript">
+  const cb = document.querySelectorAll(".form-check input")
+
+  cb.forEach((checkbox) => { checkbox.addEventListener("click", (event) => {
+        cb.forEach((box) => {
+          box.checked = false
+        })
+        event.currentTarget.checked = true
+     })
+});
+
+</script>
