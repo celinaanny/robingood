@@ -23,6 +23,16 @@
 
 .cards-container {
   padding: 50px;
+  hr {
+    &.pink {
+      border-top: 6px solid rgb(255, 0, 129);
+      width: 50px;
+    }
+    &.green {
+      border-top: 6px solid #008001;
+      width: 50px;
+    }
+  }
 }
 
 .card-square {
@@ -64,3 +74,4 @@
     margin-bottom: 30px;
   }
 }
+
