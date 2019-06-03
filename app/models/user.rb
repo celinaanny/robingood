@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  after_create :generate_codes
+  after_create :generate_codes, :send_mail_after_signup
 
   has_many :codes
   has_many :items
@@ -19,6 +19,6 @@ class User < ApplicationRecord
   end
 
   def send_mail_after_signup
-    UserMailer.welcome.deliver_now
+    UserMailer.with(user: self).welcome.deliver_now
   end
 end
