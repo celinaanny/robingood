@@ -3,8 +3,10 @@
   <h1 class="text-center">Your QR codes</h1>
   <div class="d-flex justify-content-around my-5 qr-borders">
     <% @codes.sort.each do |code| %>
-      <div class="qr-code col-lg-3">
+      <div class="qr-code qr-sendpage-size col-lg-3">
+        <p class="mb-0"><strong>Found this item? Please scan!</strong></p>
         <%= code.qrcode %>
+        <p class="mb-0"><strong><i>getrobingood.com</i></strong></p>
       </div>
       <% if code != code.user.codes.last %>
         <div class="seperator">

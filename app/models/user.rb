@@ -17,4 +17,8 @@ class User < ApplicationRecord
       Code.create(user: self)
     end
   end
+
+  def send_mail_after_signup
+    UserMailer.welcome.deliver_now
+  end
 end
