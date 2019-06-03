@@ -55,10 +55,10 @@ ActiveRecord::Schema.define(version: 2019_05_31_125811) do
     t.integer "amount_cents_cents", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.jsonb "payment"
-    t.string "state", default: "pending"
     t.float "latitude"
     t.float "longitude"
+    t.jsonb "payment"
+    t.string "state", default: "pending"
     t.index ["cause_id"], name: "index_findings_on_cause_id"
     t.index ["item_id"], name: "index_findings_on_item_id"
   end
