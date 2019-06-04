@@ -1,7 +1,15 @@
 .form-container {
-  margin: 30px auto;
-  width: 50vw;
+  @include media-breakpoint-up(sm) {
+    margin: 60px auto;
+    width: 50vw;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
 }
+
 
 .form-header {
   color: white;
@@ -12,10 +20,12 @@
 }
 
 .form-body {
+  @include media-breakpoint-up(sm) {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0 30px 30px 30px;
+  }
   background-color: white;
-  padding: 30px;
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   input {
     border-bottom: 1px solid $light-gray;
     outline: none;
@@ -47,8 +57,11 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
-
+.form-title {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
 
 .checkboxes {
   input {
