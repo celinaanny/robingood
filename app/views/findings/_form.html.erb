@@ -6,11 +6,16 @@
       <div class="finding-items-card">
         <h1><i class="fas fa-map-marker-alt"></i></h1>
         <h3><strong class="highlighted highlighted-red">Drop <%= @item.name %> off</strong> at a secure location</h3>
-          <%= f.input :address, label: false, placeholder: "enter dropoff location e.g. Starbucks" %>
+          <%= f.input :address, label: false, placeholder: "enter dropoff location (e.g. Starbucks)" %>
+          <div class="page-scroll text-center">
+          <a href="#section08" class="btn btn-circle" id="finders-page">
+            <i class="fa fa-angle-down fa-2x animated"></i>
+          </a>
+      </div>
       </div>
     </div>
 
-    <div class="card-finding-show" id="card-finding-last">
+    <div class="card-finding-show" id="section08">
       <div class="step-number-round">
         <h1>2</h1>
       </div>
@@ -52,7 +57,7 @@
             </div>
           </fieldset>
         </div>
-        <%= f.input :message, label: false, placeholder: "Leave an optional message e.g. with whom you left the item" %>
+        <%= f.input :message, label: false, placeholder: "Leave an optional message (e.g. left with Alberto)" %>
         <%= f.button :submit,"Submit", class:"form-btn" %>
       </div>
     </div>
