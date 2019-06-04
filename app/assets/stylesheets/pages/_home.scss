@@ -123,7 +123,8 @@ html {
   height: 90px;
   border-radius: 60px;
   font-size: 40px;
-  color: rgba(255, 255, 255, 0.6);
+  color: #ED3371;
+  opacity: 0.8;
   -webkit-transition: background .4s ease-in-out;
   -moz-transition: background .4s ease-in-out;
   transition: background .4s ease-in-out;
@@ -131,8 +132,8 @@ html {
 
 .btn-circle:hover, .btn-circle:focus {
   outline: 0;
-  color: #fff;
-  background: rgba(255, 255, 255, 0.0);
+  opacity: 0.5;
+  color: #ED3371;
 }
 
 header {
@@ -194,12 +195,7 @@ header .overlay {
 }
 
 #logo {
-  padding-top: 50px;
-}
-
-
-.btn-medium {
-  margin: 10px;
+  padding-top: 30px;
 }
 
 
