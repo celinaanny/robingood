@@ -52,6 +52,13 @@
   height: 75vh;
 }
 
+.welcome-items-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75%;
+}
+
 .form-check {
 
   // #label-1:before {
@@ -115,5 +122,27 @@
     margin: 0px;
     color: white;
     font-size: 50px;
+  }
+}
+
+.nav-findings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  a {
+    color: $dark-green;
+  }
+  h3 {
+    margin: 0;
+  }
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid $dark-green;
+  #question-mark {
+    position: absolute;
+    right: 30px;
+    opacity: 0.5;
   }
 }
