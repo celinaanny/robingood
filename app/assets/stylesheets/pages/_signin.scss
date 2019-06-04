@@ -2,7 +2,7 @@
 .card-signin {
   border: 0;
    @include media-breakpoint-up(sm) {
-    border-radius: 0 1rem 1rem 0
+    border-radius: 0 1rem 1rem 0;
     box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
   }
   border-radius: 1rem;
@@ -26,8 +26,9 @@
 .card-signin .card-img-left {
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1);
   width: 45%;
-  background: scroll center url('https://images.pexels.com/photos/675949/pexels-photo-675949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-image: url('https://images.unsplash.com/photo-1531168738274-aa9955d5033f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
   background-size: cover;
+  background-position: center;
 }
 
 .card-signin .card-body {
