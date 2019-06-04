@@ -5,7 +5,7 @@
         <h3 id=navbar-text>RobinGood</h3>
       </div>
     <% end %>
-  <i class="fas fa-question" id="question-mark"></i>
+      <i class="fas fa-question" id="question-mark" data-toggle="modal" data-target="#exampleModal"></i>
 </div>
 <div class="main-container">
   <div class="card-finding-show">
@@ -13,7 +13,8 @@
       <h1>Thank you for scanning!</h1>
       <hr class="green mb-4">
       <p><em>You're a real Robinhood</em></p>
-      <h3>This <%= @item.name %> has been tagged with a RobinGood QR code so it can be safely returned to its owner</h3>
+      <h3 class="opacity-h3">This <%= @item.name %> has been tagged with a RobinGood QR code so it can be safely returned to its owner</h3>
+      <p class="m-0"><em>Follow The Steps</em></p>
       <div class="page-scroll text-center">
           <a href="#section07" class="btn btn-circle" id="finders-page">
             <i class="fa fa-angle-down fa-2x animated"></i>
@@ -26,6 +27,7 @@
 
 
 
+<!-- Modal -->
 
-
+<%= render 'codes/modal' %>
 
