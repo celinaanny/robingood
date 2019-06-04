@@ -8,7 +8,7 @@
       <div class="w-100 text-white">
         <h1 class="h1_small">RobinGood</h1>
         <p class="lead mb-0">Give Back. Get Back.</p>
-        <div id="logo">
+        <div id="logo" class="mb-4">
       <i class="fas fa-feather-alt"></i>
       </div>
       <% if user_signed_in? %>
@@ -16,7 +16,7 @@
           <%= link_to "My Items", items_path, class: "btn-medium" %>
         </div>
         <div>
-        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn-medium" %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn-borderless" %>
         </div>
       <% else %>
         <div>
@@ -49,9 +49,11 @@
   <div class="cards-container card-how" id="section06">
     <div class="header-info">
       <h3>Easily return, retrieve and keep track of items lost on campus using QR technology</h3>
+      <br>
        <hr class="green">
+      <br>
     </div>
-    <div class= "row">
+    <div class= "row mb-5">
       <div class="col">
         <div class="card-square">
            <i class="fas fa-qrcode"></i>
@@ -72,12 +74,15 @@
       </div>
     </div>
   </div>
+
   <div class="cards-container card-causes">
     <div class="header-info">
       <h3>When you get your item back, give back by donating to a community cause</h3>
+      <br>
       <hr class="pink">
+      <br>
     </div>
-    <div class= "row">
+    <div class= "row mb-5">
       <div class="col">
         <div class="card-square">
           <i class="fas fa-heart"></i>

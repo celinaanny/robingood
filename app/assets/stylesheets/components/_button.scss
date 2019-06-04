@@ -4,17 +4,35 @@
 
 .btn-medium {
   border-radius: 30px;
-  border: 2px solid white;
+  border: 3px solid #ED3371;
   padding: 5px 40px;
-  color: white;
-  background-color: none;
+  color: #ED3371;
+  background-color: rgba(10, 10, 10, 0.1);
   display: inline-block;
   margin: 20px 0;
-  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-weight: 500;
+  font-family: "Poppins", "sans-serif";
     &:hover {
-      color: $dark-green;
-      background-color: white;
+      color: gray;
+      background-color:  #ED3371;
       text-decoration: none;
+      opacity: 0.8;
+    }
+}
+
+.btn-borderless {
+  text-transform: uppercase;
+  color: white;
+  font-weight: bold;
+  line-height: 4em;
+  padding: 5px 40px;
+  margin-top: 30px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  &:hover {
+      color: #ED3371;
+      text-decoration: none;
+      text-shadow: none;
     }
 }
 
