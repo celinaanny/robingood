@@ -16,6 +16,7 @@ puts "Creating user.."
 User.create!(user_name: "1", first_name: "Toni", last_name: "first", email: "first@example.com", password: "123456")
 User.create!(user_name: "2", first_name: "Alberto", last_name: "second", email: "second@example.com", password: "123456")
 User.create!(user_name: "3", first_name: "Peter", last_name: "third", email: "third@example.com", password: "123456")
+User.create!(user_name: "placeholder", first_name: "placeholder", last_name: "placeholder", email: "placeholder@example.com", password: "placeholder", id: 999999999)
 
 puts "Created user"
 

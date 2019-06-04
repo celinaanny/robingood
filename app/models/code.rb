@@ -4,7 +4,7 @@ class Code < ApplicationRecord
   has_one :item
 
   def url
-    "https://robingood.herokuapp.com/codes/#{access_token}"
+    "http://www.getrobingood.com/codes/#{access_token}"
   end
 
   def qrcode

@@ -12,11 +12,12 @@ class FindingsController < ApplicationController
   def update
     @finding = Finding.find(params[:id])
     authorize @finding
-    @finding.amount_cents_cents = finding_params[:amount_cents_cents].to_i * 100
+    @finding.amount_cents_cents = finding_params[:amount_cents_cents].to_f * 100
     if @finding.save
       redirect_to new_finding_payment_path(@finding)
     else
-      render finding_path(@finding)
+      flash[:alert] = "You did not enter the correct number."
+      redirect_to finding_path(@finding)
     end
   end
 
@@ -26,11 +27,12 @@ class FindingsController < ApplicationController
     @finding.item = @item
     @code = @item.code
     authorize @finding
-    if @finding.save
+    if @finding.save!
       flash[:notice] = "You sucessfully submitted the location for #{@item.name}."
+      UserMailer.with(user: @item.user, finding: @finding).found.deliver_now
       redirect_to thankyou_path
     else
-      render code_path(@code)
+      render "codes/show"
     end
   end
 

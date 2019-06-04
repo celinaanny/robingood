@@ -1,2 +1,5 @@
-<h3>This is the location of <%= @finding.item.name %></h3>
+
+
+<h3><%= link_to "Directions", "https://www.google.com/maps/place/#{@finding.latitude},#{@finding.longitude}" %>
+</h3>
 
