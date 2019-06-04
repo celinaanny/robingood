@@ -21,4 +21,12 @@ class User < ApplicationRecord
   def send_mail_after_signup
     UserMailer.with(user: self).welcome.deliver_now
   end
+
+  def pending_findings?
+    items.any? { |i| i.found_and_pending? }
+  end
+
+  def pending_findings
+    items.includes(:findings).where(findings: { state: "pending" })
+  end
 end
