@@ -12,6 +12,7 @@ skip_before_action :authenticate_user!, only: [:show]
   end
 
   def show
+    @hidden_navbar = true
     set_code
     @item = Item.find_by(code: @code)
     @finding = Finding.new(item: @item)

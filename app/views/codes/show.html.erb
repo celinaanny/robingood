@@ -1,11 +1,19 @@
-<div class="finding-cards-container">
-  <p class="">Welcome, Robin Hood. Thank you for scanning this item!</p>
-  <p>This item has been tagged with a RobinGood QR code so it can be safely returend to its owner.</p>
-  <p>Please follow the steps below to help it find its way back:</h3>
-   <div class="card-finding-step">
-    <p class="step-badge">1</p>
-      <p>Drop the <%= @item.name %> off at a secure location (e.g. Starbucks)</p>
-   </div>
-  <%= render 'findings/form', finding: @finding, item: @item %>
+<div class="main-container">
+  <div class="card-finding-show">
+    <h1>Thank you for scanning!</h1>
+    <p><em>You're a real Robinhood</em></p>
+    <h3>This <%= @item.name %> has been tagged with a RobinGood QR code so it can be safely returned to its owner</h3>
+    <div class="page-scroll text-center">
+        <a href="#section07" class="btn btn-circle" id="finders-page">
+          <i class="fa fa-angle-down fa-2x animated"></i>
+        </a>
+    </div>
+  </div>
+  <%= render 'findings/form' %>
 </div>
+
+
+
+
+
 
