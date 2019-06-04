@@ -1,12 +1,11 @@
 .form-container {
   margin: 30px auto;
   width: 50vw;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .form-header {
   color: white;
-  background-color: #ED3371;
-  padding: 14px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   width: 100%;
@@ -16,6 +15,7 @@
 .form-body {
   background-color: white;
   padding: 30px;
+  border-radius: 1rem;
   input {
     border-bottom: 1px solid $light-gray;
     outline: none;
