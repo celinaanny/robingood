@@ -23,6 +23,10 @@
   @include media-breakpoint-up(sm) {
    width: 50%;
   }
+  #border-green {
+    padding-bottom: 20px;
+    border-bottom: solid 1px $dark-green;
+  }
 }
 
 .card-item {
