@@ -1,7 +1,8 @@
-<div class="container background-white my-5 p-5 code-card">
-  <br>
-  <h1 class="text-center">Your QR codes</h1>
-  <div class="d-flex justify-content-around my-5 qr-borders">
+  <div class="main-container">
+  <div class="form-title">
+    <h1 class="text-center">Your <div class="highlighted-red highlighted">QR codes</div></h1>
+  </div>
+  <div class="qr-mobile qr-borders">
     <% @codes.sort.each do |code| %>
       <div class="qr-code qr-sendpage-size col-lg-3">
         <p class="mb-0"><strong>Found this item? Please scan!</strong></p>
@@ -14,8 +15,12 @@
       <% end %>
     <% end %>
   </div>
+  <br>
   <h2 class="text-center">Which address would you like us to send your QR codes to?</h2>
-  <%= render "addresses/new_address" %>
+  <div class="form-body">
+    <%= render "addresses/new_address" %>
+  </div>
+</div>
 </div>
 
 
