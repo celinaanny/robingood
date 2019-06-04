@@ -11,10 +11,13 @@
   }
   h3 {
     font-size: 22px;
-    opacity: 0.4;
     line-height: 2em;
     margin-top: 20px;
+    margin-bottom: 30px;
   }
+  .opacity-h3 {
+      opacity: 0.4;
+    }
   .btn-circle {
     color: rgb(255, 0, 129);
     &:hover {
@@ -146,3 +149,5 @@
     opacity: 0.5;
   }
 }
+
+
