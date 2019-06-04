@@ -75,4 +75,14 @@
   font-size: 0px;
 }
 
+.qr-mobile {
+   @include media-breakpoint-up(sm) {
+   display: flex;
+  }
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+}
+
 
