@@ -1,8 +1,11 @@
 
 .card-signin {
   border: 0;
+   @include media-breakpoint-up(sm) {
+    border-radius: 0 1rem 1rem 0;
+    box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+  }
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
@@ -13,6 +16,8 @@
 }
 
 .card-signin .card-img-left {
+  box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem 0 0 1rem;
   width: 45%;
   /* Link to your background image using in the property below! */
   background: scroll center url('https://images.pexels.com/photos/675949/pexels-photo-675949.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');

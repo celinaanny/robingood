@@ -1,5 +1,5 @@
-<body>
-  <div class="container">
+<body class="form-background">
+  <div class="container form-background">
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card card-signin flex-row my-5">
@@ -10,7 +10,7 @@
 
           <div class="card-body card-signin">
 
-        <h2>Create your Robin Good account!</h2>
+        <h2 class="text-center">Create your Robin Good account!</h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
 
@@ -58,9 +58,8 @@
             <%= f.button :submit, "Sign up", class: "form-btn text-uppercase" %>
           </div>
         <% end %>
-
-            <%= render "devise/shared/links" %>
-
+        <br>
+        <div class="text-center"><%= render "devise/shared/links" %></div>
       </div>
     </div>
   </div>
