@@ -1,6 +1,6 @@
 <div class="container background-white my-5 p-5 code-card">
   <br>
-  <h1 class="text-center">Your QR codes</h1>
+  <h3 class="text-center">Congrats, we've just set up your first three QR codes</h3>
   <div class="d-flex justify-content-around my-5 qr-borders">
     <% @codes.sort.each do |code| %>
       <div class="qr-code qr-sendpage-size col-lg-3">
@@ -14,8 +14,23 @@
       <% end %>
     <% end %>
   </div>
-  <h2 class="text-center">Which address would you like us to send your QR codes to?</h2>
-  <%= render "addresses/new_address" %>
+    <h3 class="text-center mb-5">Now, where would you like us to send them?</h3>
+  <div class="d-flex">
+    <div class="col-lg-6">
+      <%= render "addresses/new_address" %>
+    </div>
+    <div class="text-center all-addresses-box col-lg-6">
+      <div class="address-box">
+        <%#= @user.addresses.each do |address| %>
+        <p class="mb-1"><strong>Stephan Lotze</strong></p>
+        <p class="mb-0">Ostpreußenstraße 118</p>
+        <p class="mb-0">45259 Essen</p>
+        <p class="mb-0">Germany</p>
+        <button class="form-btn select-address-btn mt-2"><strong>Select this address</strong></button>
+      </div>
+      <%# end %>
+    </div>
+  </div>
 </div>
 
 
