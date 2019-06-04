@@ -1,5 +1,5 @@
-<body>
-  <div class="container">
+<body class="form-background">
+  <div class="container form-background">
     <div class="row">
       <div class="col-lg-10 col-xl-9 mx-auto">
         <div class="card card-signin flex-row my-5">
@@ -9,7 +9,7 @@
 
           <div class="card-body card-signin">
 
-            <h2>Log in</h2>
+            <h2 class="text-center">Log in</h2>
 
             <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -32,9 +32,9 @@
                 <%= f.button :submit, "Log in", class: "form-btn text-uppercase" %>
               </div>
               <% end %>
-
-
-                  </div>
-                </div>
-              </div>
+               <br>
+              <div class="text-center"><%= render "devise/shared/links" %></div>
             </div>
+          </div>
+        </div>
+      </div>

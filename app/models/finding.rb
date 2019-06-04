@@ -4,7 +4,7 @@ class Finding < ApplicationRecord
   belongs_to :cause
   belongs_to :item
   validates :address, presence: true
-  validates :amount_cents_cents, numericality: { greater_than_or_equal_to: 0 }
+  validates :amount_cents_cents, numericality: { greater_than: 0 }
   monetize :amount_cents_cents
   validates :state, inclusion: { in: ['pending', 'paid', 'home'] }
 end
