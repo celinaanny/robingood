@@ -10,7 +10,8 @@
 
           <div class="card-body card-signin">
 
-        <h2 class="text-center">Create your Robin Good account!</h2>
+
+        <h2>Create your account!</h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= f.error_notification %>
 
@@ -19,19 +20,19 @@
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "first name",
+                        placeholder: "First Name",
                         input_html: { autocomplete: "first_name" }%>
             <%= f.input :last_name,
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "last name",
+                        placeholder: "Last Name",
                         input_html: { autocomplete: "last_name" }%>
             <%= f.input :user_name,
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "pick a username",
+                        placeholder: "Pick a Username",
                         input_html: { autocomplete: "user_name" }%>
             <%= f.input :photo %>
             <%= f.input :photo_cache, as: :hidden %>
@@ -39,18 +40,18 @@
                         required: true,
                         autofocus: true,
                         label: false,
-                        placeholder: "enter your email",
+                        placeholder: "Enter your Email",
                         input_html: { autocomplete: "email" }%>
             <%= f.input :password,
                         required: true,
                         label: false,
-                        placeholder: "Enter a password",
+                        placeholder: "Pick a Password",
                         hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                         input_html: { autocomplete: "new-password" } %>
             <%= f.input :password_confirmation,
                         label: false,
                         required: true,
-                        placeholder: "Confirm password",
+                        placeholder: "Confirm your Password",
                         input_html: { autocomplete: "new-password" } %>
 
 
@@ -58,7 +59,7 @@
             <%= f.button :submit, "Sign up", class: "form-btn text-uppercase" %>
           </div>
         <% end %>
-        <br>
+
         <div class="text-center"><%= render "devise/shared/links" %></div>
       </div>
     </div>
