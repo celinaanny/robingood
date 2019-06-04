@@ -1,32 +1,45 @@
-<div class="card-video ">
-  <div class="card-long pt-3">
-    <h1>RobinGood</h1>
-    <br>
-    <p>Give Back. Get Back.</p>
-    <div id="logo">
+<header>
+  <div class="overlay"></div>
+  <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="https://res.cloudinary.com/dvmvunyrt/video/upload/v1559635085/Pexels_Videos_1510092_idrvxa.mp4" type="video/mp4">
+  </video>
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="h1_small">RobinGood</h1>
+        <p class="lead mb-0">Give Back. Get Back.</p>
+        <div id="logo">
       <i class="fas fa-feather-alt"></i>
-    </div>
-    <% if user_signed_in? %>
-      <div>
-        <%= link_to "My Items", items_path, class: "btn-medium" %>
       </div>
-      <div>
-      <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn-medium" %>
-      </div>
-    <% else %>
-      <div>
-      <%= link_to "Sign In", new_user_session_path, class: "btn-medium" %>
-      </div>
-      <div>
-      <%= link_to "Sign Up", new_user_registration_path, class: "btn-medium" %>
-      </div>
-    <% end %>
-
-    <div class="page-scroll text-center">
+      <% if user_signed_in? %>
+        <div>
+          <%= link_to "My Items", items_path, class: "btn-medium" %>
+        </div>
+        <div>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn-medium" %>
+        </div>
+      <% else %>
+        <div>
+        <%= link_to "Sign In", new_user_session_path, class: "btn-medium" %>
+        </div>
+        <div>
+        <%= link_to "Sign Up", new_user_registration_path, class: "btn-medium" %>
+        </div>
+      <% end %>
+       <div class="page-scroll text-center">
       <a href="#section06" class="btn btn-circle">
           <i class="fa fa-angle-down fa-2x animated"></i>
       </a>
+      </div>
+      </div>
+
+
     </div>
+  </div>
+</header>
+
+
+
 
   </div>
 
