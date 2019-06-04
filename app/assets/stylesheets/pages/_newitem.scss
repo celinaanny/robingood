@@ -1,16 +1,23 @@
 .devices-image h3 {
-  position: absolute;
-  top: 316px;
-  right: 39%;
+  text-align: center;
+   @include media-breakpoint-up(sm) {
+    padding: 150px;
+  }
+  padding: 75px 50px;
   font-size: 49px;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9);
   color: white;
   font-family: "Poppins", "sans-serif";
-
 }
 
-.devices-image img {
-  position: relative;
+.devices-image  {
+  @include media-breakpoint-up(sm) {
+    height: 300px;
+  }
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
   opacity: 0.8;
   border-radius: 1rem 1rem 0 0;
 }
