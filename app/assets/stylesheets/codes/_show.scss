@@ -1,0 +1,148 @@
+.card-finding-show {
+  position: relative;
+  text-align: center;
+  height: 100vh;
+  border: 1px solid white;
+   h1 {
+    margin-bottom: 20px;
+  }
+  @include media-breakpoint-up(sm) {
+   padding: 50px;
+  }
+  h3 {
+    font-size: 22px;
+    opacity: 0.4;
+    line-height: 2em;
+    margin-top: 20px;
+  }
+  .btn-circle {
+    color: rgb(255, 0, 129);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  p {
+    font-weight: 20px;
+  }
+  i {
+    font-size: 80px;
+    color: rgb(255, 0, 129);
+  }
+  #card-finding-last {
+    height: calc(100vh - 120px)
+  }
+  .cause-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    p {
+      font-size: 16px;
+    }
+    i {
+      font-size: 22px;
+    }
+  }
+}
+
+.finding-items-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 175px;
+  height: 75vh;
+}
+
+.welcome-items-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 75%;
+}
+
+.form-check {
+
+  // #label-1:before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f004";
+  // }
+
+  // #label-2:before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f6d3";
+  // }
+
+  // #label-3:before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f0f1";
+  // }
+
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background: white;
+  text-align: center;
+  color: $dark-green;
+    p {
+      font-size: 18px;
+      margin: 0px;
+    }
+    i {
+      font-size: 20px;
+      padding-right: 20px;
+    }
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+  label {
+    width: 100%;
+  }
+
+  .cause-card-contents {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+}
+
+.step-number-round {
+      height: 201px;
+    background: linear-gradient(570deg,rgba(255, 255, 255, 0.5) 15% , #ed4080 166% );
+    width: 201px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 70px;
+    border-radius: 60%;
+    position: absolute;
+    left: -56px;
+    top: -35px;
+  h1 {
+    margin: 0px;
+    color: white;
+    font-size: 50px;
+  }
+}
+
+.nav-findings {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  a {
+    color: $dark-green;
+  }
+  h3 {
+    margin: 0;
+  }
+  height: 80px;
+  width: 100%;
+  border-bottom: 1px solid $dark-green;
+  #question-mark {
+    position: absolute;
+    right: 30px;
+    opacity: 0.5;
+  }
+}

@@ -1,58 +1,66 @@
-<%= simple_form_for [item, finding], html: { class: "form-finding"} do |f| %>
-  <div class="card-finding-step">
-    <p class="step-badge">2</p>
-    <p>Enter the dropoff address</p>
-    <%= f.input :address, label: false, placeholder: "Vapiano, Berliner-Allee, Berlin, Germany" %>
+  <%= simple_form_for [@item, @finding], html: { class: "form-finding"} do |f| %>
+    <div class="card-finding-show" id="section07">
+      <div class="step-number-round">
+        <h1>1</h1>
+      </div>
+      <div class="finding-items-card">
+        <h1><i class="fas fa-map-marker-alt"></i></h1>
+        <h3><strong class="highlighted highlighted-red">Drop <%= @item.name %> off</strong> at a secure location</h3>
+          <%= f.input :address, label: false, placeholder: "enter dropoff location (e.g. Starbucks)" %>
+          <div class="page-scroll text-center">
+          <a href="#section08" class="btn btn-circle" id="finders-page">
+            <i class="fa fa-angle-down fa-2x animated"></i>
+          </a>
+      </div>
+      </div>
     </div>
 
-  <div class="card-finding-step">
-    <p class="step-badge">3</p>
-    <p>Select a cause for the owner to donate to as a thank you for your efforts</>
-    <div class="checkboxes">
+    <div class="card-finding-show" id="section08">
+      <div class="step-number-round">
+        <h1>2</h1>
+      </div>
+      <div class="finding-items-card">
+        <h3><strong class="highlighted highlighted-red">Select a cause</strong> for the owner to donate to as a thank you</h3>
+        <div class="checkboxes">
+          <fieldset class="form-group check_boxes optional finding_cause_id">
+            <legend class="col-form-label pt-0"></legend>
+            <input type="hidden" name="finding[cause_id]" value="">
+            <div class="cause-cards">
+                <div class="form-check">
+                  <input class="form-check-input check_boxes optional" type="radio" value="1" name="finding[cause_id]" id="finding_cause_id_1">
+                  <label id='label-1' class="collection_check_boxes" for="finding_cause_id_1">
+                     <div class="cause-card-contents">
+                       <i class="fas fa-heart"></i>
+                       <p>Celina's hospital for abused puppy pals</p>
+                     </div>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input check_boxes optional" type="radio" value="2" name="finding[cause_id]" id="finding_cause_id_2">
+                  <label id='label-2' class="collection_check_boxes" for="finding_cause_id_2">
+                    <div class="cause-card-contents">
+                      <i class="fas fa-dog"></i>
+                      <p>Stephan's centre for traumatized coders</p>
+                    </div>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input check_boxes optional" type="radio" value="3" name="finding[cause_id]" id="finding_cause_id_3">
+                  <label id='label-3' class="collection_check_boxes" for="finding_cause_id_3">
+                    <div class="cause-card-contents">
+                      <i class="fas fa-stethoscope"></i>
+                      <p>Mia's rehab for unrequited love</p>
+                    </div>
+                  </label>
+                </div>
 
-
-      <fieldset class="form-group check_boxes optional finding_cause_id">
-        <legend class="col-form-label pt-0">Cause</legend>
-        <input type="hidden" name="finding[cause_id]" value="">
-        <div class="row">
-          <div class="col">
-            <div class="form-check">
-              <input class="form-check-input check_boxes optional" type="radio" value="1" name="finding[cause_id]" id="finding_cause_id_1">
-              <label id='label-1' class="collection_check_boxes" for="finding_cause_id_1">
-                <i class="fas fa-heart"></i>
-                <p>Celina's hospital for abused puppy pals</p>
-              </label>
             </div>
-          </div>
-          <div class="col">
-            <div class="form-check">
-              <input class="form-check-input check_boxes optional" type="radio" value="2" name="finding[cause_id]" id="finding_cause_id_2">
-              <label id='label-2' class="collection_check_boxes" for="finding_cause_id_2">
-                <i class="fas fa-dog"></i>
-                <p>Stephan's centre for traumatized coders</p>
-              </label>
-            </div>
-          </div>
-          <div class="col">
-            <div class="form-check">
-              <input class="form-check-input check_boxes optional" type="radio" value="3" name="finding[cause_id]" id="finding_cause_id_3">
-              <label id='label-3' class="collection_check_boxes" for="finding_cause_id_3">
-                <i class="fas fa-stethoscope"></i>
-                <p>Mia's centre for unrequited love rehab</p>
-              </label>
-            </div>
-          </div>
+          </fieldset>
         </div>
-      </fieldset>
+        <%= f.input :message, label: false, placeholder: "Leave an optional message (e.g. left with Alberto)" %>
+        <%= f.button :submit,"Submit", class:"form-btn" %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
-  <div class="card-finding-step">
-    <p class="step-badge">4</p>
-    <p>Optional: Leave a message for the owner</p>
-    <%= f.input :message, label: "Details", placeholder: "Details, e.g. with whom you left the item" %>
-  </div>
-
-  <%= f.button :submit,"Submit", class:"form-btn" %>
-<% end %>
 
