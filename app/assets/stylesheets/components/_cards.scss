@@ -78,7 +78,10 @@
 .card-found {
   background-color: white;
   border-radius: 1rem;
-  padding: 50px;
+  @include media-breakpoint-up(sm) {
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   padding: 50px;
+  }
   text-align: center;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   h3 {
@@ -114,5 +117,51 @@
     color: #406D32;
     background: rgba(64,109,50,.1);
     padding: 5px;
+
+}
+
+
+.card-found-paid {
+  background-color: white;
+  border-radius: 1rem;
+  h1 {
+  text-align: center;
+  }
+  @include media-breakpoint-up(sm) {
+   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+   padding: 50px;
+  }
+  h3 {
+    font-size: 22px;
+    opacity: 0.4;
+    line-height: 2em;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  i {
+    color: #ED3371;
+    font-size: 20px;
+    &.green {
+      color: #008001;
+    }
+  }
+  hr {
+    &.pink {
+      border-top: 6px solid rgb(255, 0, 129);
+      width: 50px;
+    }
+    &.green {
+      border-top: 6px solid #008001;
+      width: 50px;
+    }
+  }
+}
+
+.card-paid-info {
+ @include media-breakpoint-up(sm) {
+   width: 30%;
+  }
 
 }
