@@ -16,17 +16,23 @@
 }
 
 .address-box-active {
-  box-shadow: 0 0 15px rgba(0,0,0,0.7) !important;
+  box-shadow: 0 0 10px rgba(0,0,0,0.9) !important;
 }
 
 .select-address-btn {
   width: 70%;
   font-size: 12px;
   height: 40px;
+}
+
+.select-existing-address-btn {
+  width: 70% !important;
+  font-size: 12px;
+  height: 40px;
   cursor: pointer;
 }
 
-.select-address-btn:hover {
+.select-existing-address-btn:hover {
   font-weight: bold;
 }
 
@@ -35,3 +41,21 @@
   height: 0px;
   padding: 0px;
 }
+
+.user-address-box {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 300px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  padding-left: 0px !important;
+}
+
+.user-address-box input {
+  visibility: hidden;
+}
+
+.user-address-box p {
+  padding-left: 0px;
+  font-size: 18px;
+}
+
