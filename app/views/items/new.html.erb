@@ -10,7 +10,6 @@
   <div class="form-body">
     <%= simple_form_for (@item) do |f| %>
       <%= f.input :name, label: 'Item Name', error: 'Please provide an item name', placeholder:"My kindle" %>
-      <%= f.input :category, label: 'Category', error: 'Please provide a category', :collection => ["Laptop", "Phone", "Tablet", "Notepad", "Other"] %>
       <%= f.input :description, label: 'Item Description', placeholder:"Kindle Paperwhite, newest edition" %>
       <%= f.button :submit, class: "pt-0 pb-0 hidden", id:"create-item-btn" %>
     <% end %>
