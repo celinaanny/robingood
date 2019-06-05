@@ -1,12 +1,18 @@
 .form-container {
-  margin: 30px auto;
-  width: 50vw;
+  @include media-breakpoint-up(sm) {
+    margin: 60px auto;
+    width: 50vw;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  }
+  margin-bottom: 30px;
+  margin-top: 30px;
+  border-radius: 0 0 1rem 1rem;
+  background-color: white;
 }
+
 
 .form-header {
   color: white;
-  background-color: #ED3371;
-  padding: 14px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
   width: 100%;
@@ -14,8 +20,12 @@
 }
 
 .form-body {
+  @include media-breakpoint-up(sm) {
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  padding: 0 30px 30px 30px;
+  }
   background-color: white;
-  padding: 30px;
+  border-radius: 1rem;
   input {
     border-bottom: 1px solid $light-gray;
     outline: none;
@@ -30,6 +40,7 @@
   text-align: center;
   font-size: 18px;
   padding: 8px 40px;
+  margin-top: 20px;
   border-radius: 20px;
   font-family: "Poppins", "sans-serif";
   font-weight: 500;
@@ -47,8 +58,11 @@
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
-
+.form-title {
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+}
 
 .checkboxes {
   input {
@@ -57,42 +71,5 @@
       color: #ED3E72;
     }
   }
-
-  .form-check {
-
-  // #label-1:before {
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f004";
-  // }
-
-  // #label-2:before {
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f6d3";
-  // }
-
-  // #label-3:before {
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f0f1";
-  // }
-
-  border-radius: 5px;
-  padding: 20px;
-  margin: 20px;
-  background: white;
-  text-align: center;
-  color: $dark-green;
-    p {
-      font-size: 30px;
-    }
-    i {
-      font-size: 100px;
-      margin: 30px;
-    }
-  box-shadow: 0 0 15px rgba(0,0,0,0.2)
-  }
 }
-
 

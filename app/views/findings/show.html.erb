@@ -1,46 +1,51 @@
-<div class="container background-white my-5 p-5 code-card">
+<div class="main-container">
   <% if @finding.state == 'pending' %>
-    <h2><%= @item.name %> has been found</h2>
-    <h3>Now it's your time to give back to the community!</h3>
-    <p>Your finder has chosen <%= @finding.cause.name %></p>
-    <p>Please donate to view your item's location</p>
-    <%= simple_form_for(@finding) do |f| %>
-      <%= f.input :amount_cents_cents, as: :range, min: 0.2, max: 20, label: 'Your Donation: (0.2 - 20 EUR)' %>
-      <%= f.button :submit, "Donate", class: "form-btn" %>
-    <% end %>
+    <div class="card-found">
+      <h1>Your <%= @item.name %> has been <strong class="highlighted highlighted-red">found</strong></h1>
+      <h3>Now it's your time to give back to the community</h3>
+        <i class="fas fa-hand-holding-usd"></i>
+      <p>Please donate to <strong class="highlighted highlighted-green"><%= @finding.cause.name %></strong> to view your <%= @item.name %>'s location</p>
+
+      <%= simple_form_for(@finding) do |f| %>
+        <%= f.input :amount_cents_cents, label: "Your Donation (€):", placeholder: "5" %>
+        <%= f.button :submit, "Donate", class: "form-btn" %>
+      <% end %>
+    </div>
 
   <% else %>
-    <h1>Your <%= @item.name %> was marked found!</h1>
-    <br>
-    <br>
-    <div class="d-flex justify-content-between">
-      <div>
-        <h3>Donation Summary</h3>
-        <ul class="list-unstyled p-3">
-          <li><strong>Status:</strong> <%= @finding.state %></li>
-          <li><strong>Cause:</strong> <%= @finding.cause.name %></li>
-          <li><strong>Amount:</strong> <%= humanized_money_with_symbol(@finding.amount_cents_cents / 100) %></li>
-        </ul>
-      </div>
+    <div class="card-found-paid">
+      <h1>Your <%= @item.name %> was marked <strong class="highlighted highlighted-green">found</strong></h1>
+      <br>
+      <hr class="pink">
+      <br>
+      <div class="d-flex justify-content-around flex-wrap mb-5">
+        <div class="card-paid-info">
+          <h3>Donation Summary</h3>
+          <ul class="list-unstyled">
+            <li><p><i class="fas fa-money-bill green mr-3"></i> <%= @finding.state.capitalize %></p></li>
+            <li><p><i class="fas fa-hands green mr-3"></i> <%= @finding.cause.name %></p></li>
+            <li><p><i class="fas fa-coins green mr-3"></i> <%= humanized_money_with_symbol(@finding.amount_cents) %></p></li>
+          </ul>
+        </div>
 
-      <div>
-        <h3>Item Details</h3>
-        <ul class="list-unstyled p-3">
-          <li><i class="fas fa-map-marker-alt mr-2"></i><%= @finding.address.split.map(&:capitalize).join(' ') %></li>
-          <li><i class="fas fa-info-circle mr-2"></i><%= @finding.message unless @finding.message.nil? %></li>
-          <li><i class="fas fa-hourglass-half mr-2"></i> Dropped off at <%= @finding.created_at.strftime("%l:%M %p") %> on <%= @finding.created_at.strftime(" %A, %dth %b %Y") %></li>
-        </ul>
+        <div class="card-paid-info">
+          <h3>Item Details</h3>
+          <ul class="list-unstyled">
+            <li><p><i class="fas fa-map-marker-alt mr-3"></i><%= @finding.address.split.map(&:capitalize).join(' ') %></p></li>
+            <li><p><i class="fas fa-info-circle mr-3"></i><%= @finding.message unless @finding.message.nil? %></p></li>
+            <li><p><i class="fas fa-hourglass-half mr-3"></i> Dropped off at <%= @finding.created_at.strftime("%l:%M %p") %> on <%= @finding.created_at.strftime(" %A, %d %b") %></p></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <%= link_to "Got it back!", items_path, class:"form-btn w-100"%>
-
-    <div
-    class="mt-5"
-    id="map"
-    style="width: 100%;
-    height: 600px;"
-    data-markers="<%= @markers.to_json %>"
-    data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
-    ></div>
-  <% end %>
+      <hr class="green">
+      <div
+      class="mt-5"
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      ></div>
+    <% end %>
+  </div>
 </div>

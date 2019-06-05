@@ -2,7 +2,7 @@
   justify-content: space-between;
   background: white;
   color: $dark-green;
-  border-bottom: 1px solid $dark-green;
+  border-bottom: 1px solid black;
   height: 80px;
   padding: 0 30px;
 }
@@ -16,6 +16,6 @@
   color: $dark-green;
   text-decoration: none;
     &:hover {
-      color: gray;
+      color: #ED3371;
     }
 }

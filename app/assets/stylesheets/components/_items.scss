@@ -4,12 +4,29 @@
   padding: 30px;
   background: white;
   min-height: calc(100vh - 200px);
+  hr {
+    &.pink {
+      border-top: 6px solid rgb(255, 0, 129);
+      width: 50px;
+    }
+    &.green {
+      border-top: 6px solid #008001;
+      width: 50px;
+    }
+  }
 }
 
 .cards-item {
   margin: 0 auto;
-  width: 50%;
+  width: 90%;
   text-align: center;
+  @include media-breakpoint-up(sm) {
+   width: 50%;
+  }
+  #border-green {
+    padding-bottom: 20px;
+    border-bottom: solid 1px $dark-green;
+  }
 }
 
 .card-item {
@@ -60,6 +77,16 @@
 #hidden-address-btn {
   visibility: hidden;
   font-size: 0px;
+}
+
+.qr-mobile {
+   @include media-breakpoint-up(sm) {
+   display: flex;
+  }
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: auto;
 }
 
 

@@ -1,13 +1,33 @@
-<div class="container background-white my-5 p-5 code-card">
-  <h3 class="">Welcome, Robin Hood. Thank you for scanning this item!</h3>
-  <p>This item has been tagged with a RobinGood QR code so it can be safely returend to its owner.</p>
-  <h3>Please follow the steps below to help it find its way back:</h3>
-  <ol>
-    <li>Drop the <%= @item.name %> off at a nearby location</li>
-    <li>Complete the details below so the owner knows where to pick it up</li>
-    <li>Select a cause for the item's owner to donate to as a thank you for your effort</li>
-    <li>Lean back and enjoy your good deed!</li>
-  </ol>
-  <%= render 'findings/form', finding: @finding, item: @item %>
+ <div class="nav-findings">
+      <%= link_to root_path, class: "navbar-brand" do %>
+      <div class="d-flex align-items-center">
+        <h3><i class="fas fa-feather-alt"></i></h3>
+        <h3 id=navbar-text>RobinGood</h3>
+      </div>
+    <% end %>
+      <i class="fas fa-question" id="question-mark" data-toggle="modal" data-target="#exampleModal"></i>
 </div>
+<div class="main-container">
+  <div class="card-finding-show">
+    <div class="welcome-items-card">
+      <h1>Thank you for scanning!</h1>
+      <hr class="green mb-4">
+      <p><em>You're a real Robinhood</em></p>
+      <h3 class="opacity-h3">This <%= @item.name %> has been tagged with a RobinGood QR code so it can be safely returned to its owner</h3>
+      <p class="m-0"><em>Follow The Steps</em></p>
+      <div class="page-scroll text-center">
+          <a href="#section07" class="btn btn-circle" id="finders-page">
+            <i class="fa fa-angle-down fa-2x animated"></i>
+          </a>
+      </div>
+    </div>
+  </div>
+  <%= render 'findings/form' %>
+</div>
+
+
+
+<!-- Modal -->
+
+<%= render 'codes/modal' %>
 

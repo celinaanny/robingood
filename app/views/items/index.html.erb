@@ -9,7 +9,7 @@
           <%= cl_image_tag "robin-hood_v2stam", class: "avatar-large"%>
         <% end %>
       </div>
-      <h5>my items</h5>
+      <h5 id="border-green">my items</h5>
     <div>
       <%= render 'items-card' %>
     </div>
@@ -25,7 +25,7 @@
       <% else %>
         <h5 class="mt-5 mb-3">unassigned QR codes</h5>
       <% end %>
-      <div class="d-flex justify-content-center">
+      <div class="qr-mobile">
       <% @user.codes.each do |code| %>
         <% if code.item.nil? %>
           <div class="qr-code qr-img">
