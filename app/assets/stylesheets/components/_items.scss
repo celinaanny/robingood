@@ -24,6 +24,9 @@
   @include media-breakpoint-up(sm) {
    width: 50%;
   }
+  h4 {
+    margin-bottom: none;
+  }
   #border-green {
     border-top: none;
     width: 100%;
