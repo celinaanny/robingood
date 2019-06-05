@@ -9,7 +9,7 @@ skip_before_action :authenticate_user!, only: [:show]
     @user = current_user
     @codes = Code.where(user: @user).first(3)
     skip_authorization
-    @order = Order.new
+    @order = @codes.first.order
     @address = Address.new
   end
 

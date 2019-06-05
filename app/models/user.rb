@@ -13,8 +13,9 @@ class User < ApplicationRecord
   has_many :addresses
 
   def generate_codes
+    order = Order.create(user: self)
     3.times do
-      Code.create(user: self)
+      Code.create(user: self, order: order)
     end
   end
 
