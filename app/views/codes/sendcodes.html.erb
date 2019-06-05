@@ -18,7 +18,10 @@
         <% end %>
       <% end %>
     </div>
-    <h3 class="text-center mb-4">Now, where would you like us to send them?</h3>
+    <div class="container">
+    <h3 class="text-center mb-4">
+      Now, where would you like us to send them?
+    </h3>
     <div class="d-flex">
       <div class="col-lg-6">
         <%= render "addresses/new_address" %>
@@ -28,6 +31,8 @@
           <%= render "addresses/existing_addresses" %>
         </div>
       </div>
+    </div>
+    <button class="form-btn select-address-btn mt-2" id="address-send-congrats"><strong>Continue</strong></button>
     </div>
   </div>
 </div>

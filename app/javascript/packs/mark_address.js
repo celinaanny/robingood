@@ -7,14 +7,6 @@ const addressSelectStyle = () => {
   })
 }
 
-const addressSelectText = () => {
-  const address = document.querySelectorAll(".select-address-btn");
-  address.forEach ((btn) => {
-    btn.addEventListener ("click", (event) => {
-    event.target.innerHTML = "<strong>Unselect this address</strong>";
-    })
-  })
-}
 
   // const address = document.querySelectorAll(".select-address-btn");
   // address.forEach ((btn) => {
@@ -39,5 +31,3 @@ const addressSelectText = () => {
 // };
 
 export {addressSelectStyle}
-export {addressSelectText}
-// export {addressUnselect}
