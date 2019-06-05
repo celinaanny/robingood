@@ -37,19 +37,19 @@
 
 .card-square {
   border-radius: 5px;
-  padding: 20px;
+  padding: 50px;
   margin: 20px;
   background: white;
   text-align: center;
   color: $dark-green;
     p {
-      font-size: 30px;
+      font-size: 28px;
     }
     i {
       font-size: 100px;
       margin: 30px;
     }
-  box-shadow: 0 0 20px 2px gray;
+  box-shadow: 0 0 30px 0px rgba(0,128,1, 0.1);
 }
 
 
