@@ -21,4 +21,5 @@ Rails.application.routes.draw do
   resources :addresses, only: [ :create ]
   get "/sent_confirmation", to: 'addresses#sent_confirmation'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :orders
 end
