@@ -4,8 +4,6 @@ class Item < ApplicationRecord
   has_many :findings, dependent: :destroy
   validates :name, presence: true
   validates :qr_number, :code_id, presence: true
-  validates :category, presence: true, inclusion: { in: ["Laptop", "Phone", "Tablet", "Notepad", "Other"] }
-
   # called in Item
   scope :pending, ->{ includes(:findings).where(findings: { state: "pending" }) }
 
