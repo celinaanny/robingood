@@ -20,11 +20,13 @@
   margin: 0 auto;
   width: 90%;
   text-align: center;
+  padding-bottom: 20px;
   @include media-breakpoint-up(sm) {
    width: 50%;
   }
   #border-green {
-    padding-bottom: 20px;
+    border-top: none;
+    width: 100%;
     border-bottom: solid 1px $dark-green;
   }
 }
