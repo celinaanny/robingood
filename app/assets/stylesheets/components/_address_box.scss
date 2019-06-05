@@ -15,22 +15,23 @@
   margin-left: 70px;
 }
 
-.address-box {
-  padding-top: 5px;
-  height: 170px;
-  width: 350px;
-  border-style: solid;
-  border-color: lightgrey;
-  border-width: 1px;
-}
-
 .address-box-active {
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  box-shadow: 0 0 15px rgba(0,0,0,0.7) !important;
 }
 
 .select-address-btn {
   width: 70%;
   font-size: 12px;
   height: 40px;
+  cursor: pointer;
 }
 
+.select-address-btn:hover {
+  font-weight: bold;
+}
+
+.custom-label legend {
+  visibility: hidden;
+  height: 0px;
+  padding: 0px;
+}

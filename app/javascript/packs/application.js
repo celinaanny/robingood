@@ -6,9 +6,8 @@ import { initMapbox } from '../plugins/init_mapbox';
 import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initSweetalert } from './sweetalert';
 import { sendCongrats } from "./congrats_popup";
-import { addressSelectStyle } from "./mark_address";
-import { addressSelectText } from "./mark_address";
-// import { addressUnselect } from "./mark_address";
+import { addButtonToAddress } from "./select_address_box";
+import { addressSelect } from "./mark_address";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { init_notification } from './notification';
 
@@ -25,7 +24,7 @@ if (document.querySelector("#address-send-congrats")) {
     icon: "success"
   }, (value) => {
     if (value) {
-      const link = document.querySelector('#hidden-address-btn');
+      const link = document.querySelector('#hidden-qr-order-btn');
       link.click();
     }
   });
@@ -44,14 +43,6 @@ if (document.querySelector("#hidden-qr-count")) {
   });
 }
 
-if (document.querySelector(".select-address-btn")) {
-  addressSelect();
-}
-
-// if (document.querySelector(".select-address-btn")) {
-//   addressUnselect();
-// }
-
 $(function() {
   $('#button-scroll').on('click', function(e) {
     e.preventDefault();
@@ -59,3 +50,11 @@ $(function() {
   });
 });
 
+
+if (document.querySelector(".form-check")) {
+  addButtonToAddress();
+}
+
+if (document.querySelector(".select-address-btn")) {
+  addressSelect();
+}
