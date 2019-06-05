@@ -1,7 +1,7 @@
 <div class="main-container">
 
   <div class="cards-item">
-    <h4>@ <%= @user.user_name %></h4>
+    <h4 class="mb-0">@ <%= @user.user_name %></h4>
     <div class="profile-picture">
       <% if current_user && current_user.photo.file %>
           <%= cl_image_tag current_user.photo, class: "avatar-large"%>
@@ -10,7 +10,7 @@
         <% end %>
       </div>
       <h5 class="highlighted highlighted-green">my items</h5>
-      <hr id="border-green">
+      <hr class="mb-0" id="border-green">
     <div>
       <%= render 'items-card' %>
     </div>
