@@ -90,11 +90,21 @@
   }
   p {
     font-size: 20px;
-    line-height: 3em;
+    line-height: 1.5em;
   }
   i {
     color: #ED3371;
     font-size: 26px;
+  }
+  hr {
+    &.pink {
+      border-top: 6px solid rgb(255, 0, 129);
+      width: 50px;
+    }
+    &.green {
+      border-top: 6px solid #008001;
+      width: 50px;
+    }
   }
 }
 
