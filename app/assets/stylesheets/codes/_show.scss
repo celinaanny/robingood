@@ -44,6 +44,47 @@
     i {
       font-size: 22px;
     }
+    .form-check {
+
+  // #label-1:before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f004";
+  // }
+
+  // #label-2:before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f6d3";
+  // }
+
+  // #label-3:before {
+  //   font-family: "Font Awesome 5 Free";
+  //   font-weight: 900;
+  //   content: "\f0f1";
+  // }
+
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: white;
+    text-align: center;
+    color: $dark-green;
+      p {
+        font-size: 18px;
+        margin: 0px;
+      }
+      i {
+        font-size: 20px;
+        padding-right: 20px;
+      }
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+    label {
+      width: 100%;
+
+
+  }
   }
 }
 
@@ -65,45 +106,7 @@
 
 }
 
-.form-check {
 
-  // #label-1:before {
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f004";
-  // }
-
-  // #label-2:before {
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f6d3";
-  // }
-
-  // #label-3:before {
-  //   font-family: "Font Awesome 5 Free";
-  //   font-weight: 900;
-  //   content: "\f0f1";
-  // }
-
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  background: white;
-  text-align: center;
-  color: $dark-green;
-    p {
-      font-size: 18px;
-      margin: 0px;
-    }
-    i {
-      font-size: 20px;
-      padding-right: 20px;
-    }
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-
-  label {
-    width: 100%;
-  }
 
   .cause-card-contents {
     display: flex;

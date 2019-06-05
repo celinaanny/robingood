@@ -9,7 +9,7 @@
 
           <div class="card-body card-signin">
 
-            <h2 class="text-center">Log in</h2>
+            <h2 class="text-center"><strong class="highlighted-green highlighted">Log In</strong></h2>
 
             <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 
@@ -23,7 +23,7 @@
                 <%= f.input :password,
                             required: false,
                             label: false,
-                            placeholder: "Put your password!",
+                            placeholder: "password",
                             input_html: { autocomplete: "current-password" } %>
                 <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
               </div>
