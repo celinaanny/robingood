@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_05_085224) do
+ActiveRecord::Schema.define(version: 2019_06_05_182419) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,9 @@ ActiveRecord::Schema.define(version: 2019_06_05_085224) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "access_token"
+    t.bigint "order_id"
     t.index ["access_token"], name: "index_codes_on_access_token", unique: true
+    t.index ["order_id"], name: "index_codes_on_order_id"
     t.index ["user_id"], name: "index_codes_on_user_id"
   end
 
@@ -104,6 +106,7 @@ ActiveRecord::Schema.define(version: 2019_06_05_085224) do
   end
 
   add_foreign_key "addresses", "users"
+  add_foreign_key "codes", "orders"
   add_foreign_key "codes", "users"
   add_foreign_key "findings", "causes"
   add_foreign_key "findings", "items"

@@ -4,7 +4,7 @@ class CodePolicy < ApplicationPolicy
   end
 
   def sendcodes?
-    raise
+    true
   end
 
   class Scope < Scope

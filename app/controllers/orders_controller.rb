@@ -4,7 +4,9 @@ class OrdersController < ApplicationController
     @order.billing_address = @order.shipping_address
     @order.user = current_user
     @user = current_user
-    @codes = Code.where(user: @user)
+    @codes = Code.where(user: @user).first(3)
+    raise
+    @codes.each { |code| code.order_id = @order.id }
     authorize @order
     if @order.save
       redirect_to items_path

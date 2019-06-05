@@ -1,6 +1,7 @@
 class Code < ApplicationRecord
   has_secure_token :access_token
   belongs_to :user
+  belongs_to :order, optional: true
   has_one :item
 
   def url
