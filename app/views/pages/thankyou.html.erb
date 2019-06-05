@@ -1,11 +1,18 @@
-<div class="container background-white my-5 p-5 code-card text-center">
-  <h1>Thank you!</h1>
-  <p>The information will now be passed on to the item's owner!</p>
-  <br>
-  <%= link_to "Check out RobinGood!", root_path, class: "form-btn"  %>
-  <br>
-  <br>
-  <br>
-  <%= image_tag "https://media.giphy.com/media/6LxGaLrEdGNHi/giphy.gif", style:"width: 80vw" %>
-  <br>
+<div class="nav-findings">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <div class="d-flex align-items-center">
+      <h3><i class="fas fa-feather-alt"></i></h3>
+      <h3 id=navbar-text>RobinGood</h3>
+    </div>
+  <% end %>
+</div>
+
+<div class="main-container">
+ <div class="card-found">
+  <h1 class="highlighted highlighted-red m-2">Thank you!</h1>
+  <h3 class="opacity-h3 my-4">The owner has been notified</h3>
+  <div class="my-4"><%= link_to "Sign Up for RobinGood!", new_user_registration_path, class: "form-btn"  %></div>
+  <div class="my-4"><%= link_to "Learn More", root_path, class: "learn-more"  %></div>
+  <div class="my-4"><%= image_tag "https://media.giphy.com/media/6LxGaLrEdGNHi/giphy.gif", style:"width: 80%" %></div>
+  </div>
 </div>

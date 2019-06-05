@@ -29,8 +29,8 @@ Cause.create!(name: "Mia's centre for unrequited love rehab", image: "https://im
 puts "Causes created"
 puts "Create Items..."
 
-Item.create!(name: "iPhone", description: "my iphone is beautiful", qr_number: "1", disabled: false, category: "Phone", code: User.first.codes.first, user: User.first)
-Item.create!(name: "Book", description: "my book is beautiful", qr_number: "1", disabled: false, category: "Notepad", code: User.last.codes.first, user: User.last)
+Item.create!(name: "iPhone", description: "my iphone is beautiful", qr_number: "1", disabled: false, code: User.first.codes.first, user: User.first)
+Item.create!(name: "Book", description: "my book is beautiful", qr_number: "1", disabled: false, code: User.last.codes.first, user: User.last)
 
 puts "Items created"
 puts "Creating finding..."

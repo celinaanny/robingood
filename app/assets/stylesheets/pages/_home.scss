@@ -204,3 +204,26 @@ header .overlay {
 .fa-angle-down {
 }
 
+.steps-icon {
+  height: 180px;
+}
+
+
+.step-number-round-green {
+    height: 50px;
+    background: linear-gradient(570deg,rgba(255, 255, 255, 0.5) 15% , #008001 166% );
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 70px;
+    border-radius: 60%;
+    position: absolute;
+    left: 0px;
+    bottom: -25px;
+  h1 {
+    left: 20px;
+    color: #008001;
+    font-size: 40px;
+  }
+}

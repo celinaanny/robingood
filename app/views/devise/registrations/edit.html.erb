@@ -4,7 +4,7 @@
   <% end %></h2>
 
   <div class="form-title">
-    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    <h2>Update Account</h2>
   </div>
   <hr class="pink">
 
@@ -21,21 +21,22 @@
       <%= f.input :first_name,
                           required: true,
                           autofocus: true,
-                          label: false,
+                          label: "first name",
                           placeholder: "first name",
                           input_html: { autocomplete: "email" }%>
       <%= f.input :last_name,
                           required: true,
                           autofocus: true,
-                          label: false,
+                          label: "last name",
                           placeholder: "last name",
                           input_html: { autocomplete: "email" }%>
-      <%= f.input :photo %>
+      <%= f.input :photo,
+                          label: "photo"  %>
       <%= f.input :photo_cache, as: :hidden %>
       <%= f.input :user_name,
                           required: true,
                           autofocus: true,
-                          label: false,
+                          label: "user name",
                           placeholder: "enter your email!",
                           input_html: { autocomplete: "email" }%>
       <%= f.input :password,

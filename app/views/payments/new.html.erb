@@ -1,20 +1,34 @@
-<div class="container background-white my-5 p-5 code-card">
-<h1>Donation for <%= @finding.cause.name %></h1>
-<%= form_tag finding_payments_path(@finding) do %>
-  <article>
-    <label class="amount">
-      <span>Amount: <%= humanized_money_with_symbol(@finding.amount_cents) %></span>
-    </label>
-  </article>
+<div class="main-container">
+  <div class="card-found">
+      <h1>Donation for <div class="highlighted highlighted-red"><%= @finding.cause.name %></div></h1>
+        <%= form_tag finding_payments_path(@finding) do %>
+          <article>
+            <label class="amount">
+               <hr class="green mb-5">
+              <span>
+                <ul class="list-unstyled text-left">
+                  <li><p><i class="fas fa-coins green mr-3"></i> <%= humanized_money_with_symbol(@finding.amount_cents) %></p></li>
+                  <li><p><i class="fas fa-hands green mr-3" style="color: #008001;"></i> <%= @finding.cause.name %></p></li>
+                  <li><p><i class="fas fa-info-circle mr-3" style="color: #008001;"></i> <%= @finding.cause.description %></p></li>
+                </ul>
+              </span>
+            </label>
+          </article>
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My Donation"
-    data-email="<%= current_user.email %>"
-    data-description="Donation <%= @finding.cause.name %>"
-    data-amount="<%= @finding.amount_cents_cents %>"
-    data-currency="eur"
-    ></script>
+          <div class="mb-5 mt-4">
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button mb-5"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-name="My Donation"
+              data-email="<%= current_user.email %>"
+              data-description="Donation <%= @finding.cause.name %>"
+              data-amount="<%= @finding.amount_cents_cents %>"
+              data-currency="eur"
+              ></script>
+          </div>
 
-<% end %>
+          <article><%= image_tag @finding.cause.image, style:"height: 50vh; width: auto;"%></article>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

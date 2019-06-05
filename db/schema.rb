@@ -52,13 +52,13 @@ ActiveRecord::Schema.define(version: 2019_06_05_084350) do
     t.string "message"
     t.bigint "cause_id"
     t.bigint "item_id"
-    t.integer "amount_cents_cents", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
     t.jsonb "payment"
     t.string "state", default: "pending"
+    t.integer "amount_cents_cents", default: 5
     t.index ["cause_id"], name: "index_findings_on_cause_id"
     t.index ["item_id"], name: "index_findings_on_item_id"
   end
@@ -72,7 +72,6 @@ ActiveRecord::Schema.define(version: 2019_06_05_084350) do
     t.datetime "updated_at", null: false
     t.boolean "disabled", default: false
     t.integer "qr_number"
-    t.string "category"
     t.index ["code_id"], name: "index_items_on_code_id"
     t.index ["user_id"], name: "index_items_on_user_id"
   end

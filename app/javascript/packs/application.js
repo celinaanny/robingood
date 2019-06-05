@@ -9,12 +9,13 @@ import { sendCongrats } from "./congrats_popup";
 import { addButtonToAddress } from "./select_address_box";
 import { addressSelect } from "./mark_address";
 import { initAutocomplete } from '../plugins/init_autocomplete';
-import './notification';
+import { init_notification } from './notification';
 
 addAttributesToQRCode();
 initAutocomplete();
 initMapbox();
 addAttributesToRect();
+init_notification();
 
 if (document.querySelector("#address-send-congrats")) {
   sendCongrats('#address-send-congrats', {

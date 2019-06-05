@@ -2,8 +2,7 @@
   Hi <% @user.first_name %>,
 </p>
 <p>
-  Your device "<%= @finding.item.name %>" has been found and returned at <%= @finding.address %>. Please log into your account at www.getrobingood.com for further informations.
-</p>
+  Your item "<%= @finding.item.name %>" has been found and left at a secure location, <%= link_to "click here to see where it is!", finding_url(@finding) %>.
 <p>
   Best,
 </p>

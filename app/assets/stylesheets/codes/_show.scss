@@ -1,19 +1,19 @@
 .card-finding-show {
   position: relative;
   text-align: center;
-  height: 100vh;
+  height: calc(100vh - 50px);
   border: 1px solid white;
    h1 {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   @include media-breakpoint-up(sm) {
    padding: 50px;
   }
   h3 {
     font-size: 22px;
-    line-height: 2em;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    line-height: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
   .opacity-h3 {
       opacity: 0.4;
@@ -44,25 +44,7 @@
     i {
       font-size: 22px;
     }
-  }
-}
-
-.finding-items-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  margin-top: 175px;
-  height: 75vh;
-}
-
-.welcome-items-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 75%;
-}
-
-.form-check {
+    .form-check {
 
   // #label-1:before {
   //   font-family: "Font Awesome 5 Free";
@@ -82,25 +64,49 @@
   //   content: "\f0f1";
   // }
 
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px 0;
-  background: white;
-  text-align: center;
-  color: $dark-green;
-    p {
-      font-size: 18px;
-      margin: 0px;
-    }
-    i {
-      font-size: 20px;
-      padding-right: 20px;
-    }
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background: white;
+    text-align: center;
+    color: $dark-green;
+      p {
+        font-size: 18px;
+        margin: 0px;
+      }
+      i {
+        font-size: 20px;
+        padding-right: 20px;
+      }
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
 
-  label {
-    width: 100%;
+    label {
+      width: 100%;
+
+
   }
+  }
+}
+
+.finding-items-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 115px;
+  height: 75%;
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.welcome-items-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+
 
   .cause-card-contents {
     display: flex;
@@ -110,20 +116,20 @@
 }
 
 .step-number-round {
-      height: 201px;
+    height: 170px;
     background: linear-gradient(570deg,rgba(255, 255, 255, 0.5) 15% , #ed4080 166% );
-    width: 201px;
+    width: 170px;
     justify-content: center;
     align-items: center;
     margin: 0;
     padding: 70px;
     border-radius: 60%;
     position: absolute;
-    left: -56px;
-    top: -35px;
+    left: -86px;
+    top: -65px;
   h1 {
-    margin: 0px;
-    color: white;
+    margin: 10px 0px 0px 10px;
+    color: #ed4080;
     font-size: 50px;
   }
 }
@@ -134,6 +140,10 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  button {
+    background: transparent;
+    border: 0;
+  }
   a {
     color: $dark-green;
   }
@@ -144,9 +154,12 @@
   width: 100%;
   border-bottom: 1px solid $dark-green;
   #question-mark {
+
     position: absolute;
     right: 30px;
+    top: 32px;
     opacity: 0.5;
+    z-index: 10000000;
   }
 }
 
