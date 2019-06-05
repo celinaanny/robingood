@@ -7,12 +7,13 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initSweetalert } from './sweetalert';
 import { sendCongrats } from "./congrats_popup";
 import { initAutocomplete } from '../plugins/init_autocomplete';
-import './notification';
+import { init_notification } from './notification';
 
 addAttributesToQRCode();
 initAutocomplete();
 initMapbox();
 addAttributesToRect();
+init_notification();
 
 if (document.querySelector("#address-send-congrats")) {
   sendCongrats('#address-send-congrats', {
