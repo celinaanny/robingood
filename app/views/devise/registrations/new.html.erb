@@ -1,66 +1,70 @@
 <body class="form-background">
   <div class="container form-background">
-    <div class="row">
-      <div class="col-lg-10 col-xl-9 mx-auto">
-        <div class="card card-border-radius card-signin flex-row my-5">
-          <div class="card-img-left d-none d-md-flex">
+      <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+          <div class="card card-border-radius card-signin flex-row my-5">
+            <div class="card-img-left d-none d-md-flex">
 
+            </div>
+
+
+          <div class="card-body card-signin">
+
+            <h2 class="text-center"><strong class="highlighted highlighted-red">Create</strong> your account</h2>
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= f.error_notification %>
+
+              <div class="form-inputs">
+                <%= f.input :first_name,
+                            required: true,
+                            autofocus: true,
+                            label: false,
+                            placeholder: "First Name",
+                            input_html: { autocomplete: "first_name" }%>
+                <%= f.input :last_name,
+                            required: true,
+                            autofocus: true,
+                            label: false,
+                            placeholder: "Last Name",
+                            input_html: { autocomplete: "last_name" }%>
+                <%= f.input :user_name,
+                            required: true,
+                            autofocus: true,
+                            label: false,
+                            placeholder: "Pick a Username",
+                            input_html: { autocomplete: "user_name" }%>
+                <%= f.input :photo %>
+                <%= f.input :photo_cache, as: :hidden %>
+                <%= f.input :email,
+                            required: true,
+                            autofocus: true,
+                            label: false,
+                            placeholder: "Enter Your Email",
+                            input_html: { autocomplete: "email" }%>
+                <%= f.input :password,
+                            required: true,
+                            label: false,
+                            placeholder: "Enter a Password",
+                            hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                            input_html: { autocomplete: "new-password" } %>
+                <%= f.input :password_confirmation,
+                            label: false,
+                            required: true,
+                            placeholder: "Confirm Password",
+                            input_html: { autocomplete: "new-password" } %>
+
+
+              <div class="form-actions">
+                <%= f.button :submit, "Sign up", class: "form-btn text-uppercase" %>
+              </div>
+            <% end %>
+            <br>
+            <div class="text-center"><%= render "devise/shared/links" %></div>
           </div>
-
-
-      <div class="card-body card-signin">
-
-        <h2 class="text-center">Create your account!</h2>
-        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= f.error_notification %>
-
-          <div class="form-inputs">
-            <%= f.input :first_name,
-                        required: true,
-                        autofocus: true,
-                        label: false,
-                        placeholder: "first name",
-                        input_html: { autocomplete: "first_name" }%>
-            <%= f.input :last_name,
-                        required: true,
-                        autofocus: true,
-                        label: false,
-                        placeholder: "last name",
-                        input_html: { autocomplete: "last_name" }%>
-            <%= f.input :user_name,
-                        required: true,
-                        autofocus: true,
-                        label: false,
-                        placeholder: "pick a username",
-                        input_html: { autocomplete: "user_name" }%>
-            <%= f.input :photo %>
-            <%= f.input :photo_cache, as: :hidden %>
-            <%= f.input :email,
-                        required: true,
-                        autofocus: true,
-                        label: false,
-                        placeholder: "enter your email",
-                        input_html: { autocomplete: "email" }%>
-            <%= f.input :password,
-                        required: true,
-                        label: false,
-                        placeholder: "Enter a password",
-                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                        input_html: { autocomplete: "new-password" } %>
-            <%= f.input :password_confirmation,
-                        label: false,
-                        required: true,
-                        placeholder: "Confirm password",
-                        input_html: { autocomplete: "new-password" } %>
-
-
-          <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "form-btn text-uppercase" %>
-          </div>
-        <% end %>
-        <br>
-        <div class="text-center"><%= render "devise/shared/links" %></div>
+        </div>
       </div>
+        </div>
     </div>
-  </div>
 </div>
+
+
