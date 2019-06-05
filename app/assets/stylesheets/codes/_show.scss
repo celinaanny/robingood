@@ -140,6 +140,10 @@
   align-items: center;
   justify-content: center;
   background-color: white;
+  button {
+    background: transparent;
+    border: 0;
+  }
   a {
     color: $dark-green;
   }
@@ -150,9 +154,12 @@
   width: 100%;
   border-bottom: 1px solid $dark-green;
   #question-mark {
+
     position: absolute;
     right: 30px;
+    top: 32px;
     opacity: 0.5;
+    z-index: 10000000;
   }
 }
 

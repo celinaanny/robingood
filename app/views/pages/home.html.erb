@@ -46,19 +46,20 @@
     <div class= "row mb-5">
       <div class="col">
         <div class="card-square">
-           <i class="fas fa-qrcode"></i>
-          <p><strong>Step 1:</strong> Order free QR codes</p>
+          <%= image_tag "order", class: "steps-icon" %>
+          <div class="step-number-round-green"><h1>1</h1></div>
+          <p class="text-right mt-3 mr-2">Order free QR codes</p>
         </div>
       </div>
       <div class="col">
         <div class="card-square">
-          <i class="fas fa-mobile"></i>
-          <p><strong>Step 2:</strong> Place on your item</p>
+          <%= image_tag "placeonitem", class: "steps-icon" %>
+          <p><strong style="color: #008001;">Step 2:</strong> Place on your item</p>
         </div>
       </div>
       <div class="col">
         <div class="card-square">
-          <i class="fas fa-grin-hearts"></i>
+          <%= image_tag "getback", class: "steps-icon" %>
           <p><strong>Step 3:</strong> Get your item back</p>
         </div>
       </div>
