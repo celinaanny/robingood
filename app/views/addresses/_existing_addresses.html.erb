@@ -1,4 +1,4 @@
 <%= simple_form_for @order, html: {class: "blabla"} do |f| -%>
-  <%= f.association :shipping_address, collection: current_user.addresses, as: :radio_buttons, wrapper_html: {class: "custom-label"}, :label_method => lambda {|address| "<p class=\"mb-1\"><strong>#{address.name}</strong></p><p class=\"mb-0\">#{address.street}</p><p class=\"mb-0\">#{address.postal_code} #{address.city}</p><p class=\"mb-0\">#{address.country}</p>".html_safe} %>
-  <%= f.button :submit, value:"Select this address", id:"hidden-qr-order-btn" %>
+  <%= f.association :shipping_address, collection: current_user.addresses, as: :radio_buttons, wrapper_html: {class: "custom-label"}, :label_method => lambda {|address| "<p class=\"mb-1 pt-2\"><strong>#{address.name}</strong></p><p class=\"mb-0\">#{address.street}</p><p class=\"mb-0\">#{address.postal_code} #{address.city}</p><p class=\"mb-0\">#{address.country}</p>".html_safe} %>
+  <%= f.button :submit, value:"", id:"hidden-qr-order-btn" %>
 <% end -%>
