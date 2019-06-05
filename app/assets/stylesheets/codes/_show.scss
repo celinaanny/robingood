@@ -4,7 +4,7 @@
   height: 100vh;
   border: 1px solid white;
    h1 {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
   @include media-breakpoint-up(sm) {
    padding: 50px;
@@ -12,8 +12,8 @@
   h3 {
     font-size: 22px;
     line-height: 2em;
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
   .opacity-h3 {
       opacity: 0.4;
@@ -52,14 +52,17 @@
   flex-direction: column;
   justify-content: space-around;
   margin-top: 175px;
-  height: 75vh;
+  height: 75%;
+  h3 {
+    margin-bottom: 0;
+  }
 }
 
 .welcome-items-card {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  height: 75%;
+  height: 80%;
 }
 
 .form-check {
