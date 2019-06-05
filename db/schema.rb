@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_04_090929) do
+ActiveRecord::Schema.define(version: 2019_06_05_083958) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,13 +52,13 @@ ActiveRecord::Schema.define(version: 2019_06_04_090929) do
     t.string "message"
     t.bigint "cause_id"
     t.bigint "item_id"
-    t.integer "amount_cents_cents", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.float "latitude"
     t.float "longitude"
     t.jsonb "payment"
     t.string "state", default: "pending"
+    t.integer "amount_cents_cents", default: 5
     t.index ["cause_id"], name: "index_findings_on_cause_id"
     t.index ["item_id"], name: "index_findings_on_item_id"
   end
