@@ -1,4 +1,4 @@
-const box = document.querySelectorAll(".form-check")
+const box = document.querySelectorAll(".custom-label")
 
 const addButtonToAddress = () => {
   box.forEach ((box) => {
