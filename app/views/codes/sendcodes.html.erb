@@ -21,12 +21,7 @@
     </div>
     <div class="text-center all-addresses-box col-lg-6">
       <div class="address-box">
-        <%#= @user.addresses.each do |address| %>
-        <p class="mb-1"><strong>Stephan Lotze</strong></p>
-        <p class="mb-0">Ostpreußenstraße 118</p>
-        <p class="mb-0">45259 Essen</p>
-        <p class="mb-0">Germany</p>
-        <button class="form-btn select-address-btn mt-2"><strong>Select this address</strong></button>
+        <%= render "addresses/existing_addresses" %>
       </div>
       <%# end %>
     </div>

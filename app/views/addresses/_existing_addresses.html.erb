@@ -1,3 +1,6 @@
-<% form_for @user.addresses do |f| -%>
-
+<%= simple_form_for @order do |f| -%>
+          <%= f.association :shipping_address, collection: current_user.addresses, as: :radio_buttons, :label_method => lambda {|address| "<p class=\"mb-1\"><strong>#{address.name}</strong></p><p class=\"mb-0\">#{address.street}</p><p class=\"mb-0\">#{address.postal_code} #{address.city}</p><p class=\"mb-0\">#{address.country}</p>".html_safe} %>
+          <%= f.button :submit, value:"Select this address", class:"form-btn select-address-btn mt-2" %>
 <% end -%>
+
+        <button class="form-btn select-address-btn mt-2"><strong>Select this address</strong></button>

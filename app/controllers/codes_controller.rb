@@ -8,6 +8,7 @@ skip_before_action :authenticate_user!, only: [:show]
   def sendcodes
     @user = current_user
     @codes = Code.where(user: @user)
+    @order = Order.new
     @address = Address.new
     authorize @codes
   end
