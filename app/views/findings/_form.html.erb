@@ -1,11 +1,11 @@
-  <%= simple_form_for [@item, @finding], html: { class: "form-finding"} do |f| %>
+  <%= simple_form_for [item, finding], html: { class: "form-finding"} do |f| %>
     <div class="card-finding-show" id="section07">
       <div class="step-number-round">
         <h1>1</h1>
       </div>
       <div class="finding-items-card">
         <h1><i class="fas fa-map-marker-alt"></i></h1>
-        <h3><strong class="highlighted-red">Drop <%= @item.name %> off</strong> <strong class="opacity-h3">at a secure location</strong></h3>
+        <h3><strong class="highlighted-red">Drop <%= item.name %> off</strong> <strong class="opacity-h3">at a secure location</strong></h3>
           <%= f.input :address, label: false, placeholder: "enter dropoff location (e.g. Starbucks)" %>
           <div class="page-scroll text-center">
           <a href="#section08" class="btn btn-circle" id="finders-page">
