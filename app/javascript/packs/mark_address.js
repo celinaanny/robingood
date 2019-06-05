@@ -1,5 +1,12 @@
+const addClassToAddressBox = () => {
+  const existingAddressBox = document.querySelectorAll(".form-check")
+  existingAddressBox.forEach ((box) => {
+    box.classList.add("user-address-box");
+  });
+};
+
 const addressSelect = () => {
-  const address = document.querySelectorAll(".select-address-btn");
+  const address = document.querySelectorAll(".select-existing-address-btn");
   address.forEach ((address) => {
     address.addEventListener ("click", (event) => {
       event.target.parentElement.classList.toggle("address-box-active");
@@ -29,4 +36,5 @@ const addressSelect = () => {
 //     });
 // };
 
+export { addClassToAddressBox };
 export { addressSelect };

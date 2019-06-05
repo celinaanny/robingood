@@ -5,3 +5,5 @@ const addNewAddress = () => {
     button.click();
   });
 };
+
+export { addNewAddress };

@@ -23,10 +23,16 @@
   width: 70%;
   font-size: 12px;
   height: 40px;
+}
+
+.select-existing-address-btn {
+  width: 70%;
+  font-size: 12px;
+  height: 40px;
   cursor: pointer;
 }
 
-.select-address-btn:hover {
+.select-existing-address-btn:hover {
   font-weight: bold;
 }
 
@@ -34,4 +40,8 @@
   visibility: hidden;
   height: 0px;
   padding: 0px;
+}
+
+.user-address-box {
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }

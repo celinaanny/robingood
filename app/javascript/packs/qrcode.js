@@ -1,4 +1,3 @@
-
 const addAttributesToQRCode = () => {
   const qrCodes = document.querySelectorAll(".qr-code svg");
   qrCodes.forEach((qrCode) => {
@@ -6,7 +5,6 @@ const addAttributesToQRCode = () => {
     qrCode.setAttribute("preserveAspectRatio", "xMinYMin slice");
     console.log(qrCode);
   })
-
 }
 
 export { addAttributesToQRCode };

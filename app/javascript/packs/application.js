@@ -7,15 +7,17 @@ import '@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
 import { initSweetalert } from './sweetalert';
 import { sendCongrats } from "./congrats_popup";
 import { addButtonToAddress } from "./select_address_box";
+import { addNewAddress } from "./add_new_address";
 import { addressSelect } from "./mark_address";
+import { addClassToAddressBox } from "./mark_address";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { init_notification } from './notification';
 
 addAttributesToQRCode();
 initAutocomplete();
 initMapbox();
-addAttributesToRect();
 init_notification();
+addAttributesToRect();
 
 if (document.querySelector("#address-send-congrats")) {
   sendCongrats('#address-send-congrats', {
@@ -51,10 +53,19 @@ $(function() {
 });
 
 
-if (document.querySelector(".form-check")) {
+if (document.querySelector("#sendcodes-page")) {
   addButtonToAddress();
 }
 
-if (document.querySelector(".select-address-btn")) {
+if (document.querySelector("#new-address-btn")) {
+  addNewAddress();
+}
+
+if (document.querySelector(".select-existing-address-btn")) {
   addressSelect();
 }
+
+if (document.querySelector("#sendcodes-page")) {
+  addClassToAddressBox();
+};
+
