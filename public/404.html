@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <img src="src="/images/404.png alt="notfound">
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
@@ -51,17 +52,104 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+.404 {
+  body
+    width: 100%
+    height: 100%
+    background: #fff
+    font-size: 16px
+    line-height: 25px
+    font-weight: normal
+    background: url(https://i.imgur.com/bsqWdBi.jpg)
+
+.msg
+    color: #fff
+    text-align: center
+    animation: flicker 2s ease infinite
+
+
+.astro-wrap
+    width: 265px
+    height: 430px
+    margin: 0 auto
+    position: relative
+
+.astronaut
+    background: url(https://i.imgur.com/VurcHkh.png)
+    width: 265px
+    height: 429px
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(0,50px)
+    animation: move 10s infinite
+
+@keyframes move
+    0%
+        transform: translate(0,50px)
+    50%
+        transform: translate(20px,100px)
+    100%
+        transform: translate(0,50px)
+
+@keyframes blink
+    0%
+        top: 50px
+        left: 0px
+    50%
+        top: 100px
+        left: 20px
+    100%
+        top: 50px
+        left: 0px
+
+@keyframes flicker
+    0%
+        opacity: 0.9
+    30%
+        opacity: 0.97
+    40%
+        opacity: 1
+    80%
+        opacity: 0.9
+    88%
+        opacity: 0.98
+    90%
+        opacity: 0.94
+    93%
+        opacity: 0.9
+    95%
+        opacity: 0.99
+    96%
+        opacity: 0.93
+    98%
+        opacity: 1
+    99%
+        opacity: 0.93
+
+
+@media only screen and (max-width: 570px)
+    .msg
+        position: absolut
+
+@media only screen and (min-width: 1900px)
+    body
+        background-size: cover
+
+}
+
+
   </style>
 </head>
 
-<body class="rails-default-error-page">
+<body class="404">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+<body>
+  <h1 class="msg">..shhh.. ..houston... ..404... ..shhhh... ..lost.. ..in.. ..space. .shhhhh...</h1>
+  <div class="astro-wrap">
+    <a class="astronaut" href="#" title="return to base"></a>
   </div>
+</body>
 </body>
 </html>
