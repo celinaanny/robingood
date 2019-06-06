@@ -1,42 +1,44 @@
 <div class="main-container">
 
-  <div class="cards-item">
-    <h4 class="mb-0">@ <%= @user.user_name %></h4>
-    <div class="profile-picture">
-      <% if current_user && current_user.photo.file %>
-          <%= cl_image_tag current_user.photo, class: "avatar-large"%>
+  <div class="d-flex">
+    <div class="cards-item">
+      <h4 class="mb-0">@ <%= @user.user_name %></h4>
+      <div class="profile-picture">
+        <% if current_user && current_user.photo.file %>
+            <%= cl_image_tag current_user.photo, class: "avatar-large"%>
+          <% else %>
+            <%= cl_image_tag "robin-hood_v2stam", class: "avatar-large"%>
+          <% end %>
+        </div>
+        <h5 class="highlighted highlighted-green">my items</h5>
+        <hr class="mb-0" id="border-green">
+      <div>
+        <%= render 'items-card' %>
+      </div>
+      <div>
+      <h1>
+        <%= link_to new_item_path do %>
+          <i class="fas fa-plus-circle"></i>
+        <% end %>
+      </h1>
+      <div>
+        <% if @user.codes.last.item %>
+          <h5 class="mt-5 mb-3">Sorry mate, you have no QR codes left. Order new ones</h5>
         <% else %>
-          <%= cl_image_tag "robin-hood_v2stam", class: "avatar-large"%>
+          <h5 class="mt-5 mb-3">unassigned QR codes</h5>
         <% end %>
-      </div>
-      <h5 class="highlighted highlighted-green">my items</h5>
-      <hr class="mb-0" id="border-green">
-    <div>
-      <%= render 'items-card' %>
-    </div>
-    <div>
-    <h1>
-      <%= link_to new_item_path do %>
-        <i class="fas fa-plus-circle"></i>
-      <% end %>
-    </h1>
-    <div>
-      <% if @user.codes.last.item %>
-        <h5 class="mt-5 mb-3">Sorry mate, you have no QR codes left. Order new ones</h5>
-      <% else %>
-        <h5 class="mt-5 mb-3">unassigned QR codes</h5>
-      <% end %>
-      <div class="qr-mobile">
-      <% @user.codes.each do |code| %>
-        <% if code.item.nil? %>
-          <div class="qr-code qr-img">
-            <%= code.qrcode %>
-          </div>
+        <div class="qr-mobile">
+        <% @user.codes.each do |code| %>
+          <% if code.item.nil? %>
+            <div class="qr-code qr-img">
+              <%= code.qrcode %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+        </div>
       </div>
     </div>
-  </div>
+    </div>
   </div>
 </div>
 
