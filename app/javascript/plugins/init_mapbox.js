@@ -18,7 +18,6 @@ const fitMapToMarkers = (map, markers) => {
     });
   const markers = JSON.parse(mapElement.dataset.markers);
   const marker_array = [markers]
-  console.log(marker_array);
   marker_array.forEach((marker) => {
     const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
     new mapboxgl.Marker()
@@ -27,7 +26,6 @@ const fitMapToMarkers = (map, markers) => {
       .addTo(map);
   });
   fitMapToMarkers(map, marker_array);
-  map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken }));
   }
 };
 
