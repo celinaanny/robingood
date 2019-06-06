@@ -20,8 +20,8 @@ class OrdersController < ApplicationController
     @codes = Code.where(user: @user).first(3)
     @order = Order.find(params[:id])
     authorize @order
-    if @order.update(order_params)
-      if @order.update(status: "processed")
+    if @order.update!(order_params)
+      if @order.update!(status: "processed")
         redirect_to items_path
       else
         render "codes/sendcodes"
@@ -33,6 +33,6 @@ class OrdersController < ApplicationController
 
   private
   def order_params
-    params.require(:order).permit(:shipping_address_id, :billing_address_id, :status)
+    params.require(:order).permit(:shipping_address_id, :billing_address_id, :status, :order_type_id)
   end
 end
