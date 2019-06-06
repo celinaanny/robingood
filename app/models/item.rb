@@ -11,4 +11,8 @@ class Item < ApplicationRecord
   def found_and_pending?
     findings.any? { |f| f.state == "pending" }
   end
+
+  def pending_finding
+    findings.find_by(state: "pending").id
+  end
 end
