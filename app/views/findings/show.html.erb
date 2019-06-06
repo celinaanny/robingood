@@ -1,15 +1,17 @@
 <div class="main-container">
   <% if @finding.state == 'pending' %>
-    <div class="card-found">
-      <h1>Your <%= @item.name %> has been <strong class="highlighted highlighted-red">found</strong></h1>
-      <h3>Now it's your time to give back to the community</h3>
-        <i class="fas fa-hand-holding-usd"></i>
-      <p class="mt-3">Please donate to <strong class="highlighted highlighted-green"><%= @finding.cause.name %></strong> to view your <%= @item.name %>'s location</p>
+    <div class="edit-profile">
+      <div class="card-found">
+        <h1>Your <%= @item.name %> has been <strong class="highlighted highlighted-red">found</strong></h1>
+        <h3>Now it's your time to give back to the community</h3>
+          <i class="fas fa-hand-holding-usd"></i>
+        <p class="mt-3">Please donate to <strong class="highlighted highlighted-green"><%= @finding.cause.name %></strong> to view your <%= @item.name %>'s location</p>
 
-      <%= simple_form_for(@finding) do |f| %>
-        <%= f.input :amount_cents_cents, label: "Your Donation (€):", placeholder: "5" %>
-        <%= f.button :submit, "Donate", class: "form-btn" %>
-      <% end %>
+        <%= simple_form_for(@finding) do |f| %>
+          <%= f.input :amount_cents_cents, label: "Your Donation (€):", placeholder: "5" %>
+          <%= f.button :submit, "Donate", class: "form-btn" %>
+        <% end %>
+      </div>
     </div>
 
   <% else %>

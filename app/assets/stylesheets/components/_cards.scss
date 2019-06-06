@@ -179,4 +179,10 @@
   color: #008001;
 }
 
+#found-paid {
+  margin: 0px 50px;
+  @include media-breakpoint-up(sm) {
+    margin: 0px 50px;
+  }
+}
 
