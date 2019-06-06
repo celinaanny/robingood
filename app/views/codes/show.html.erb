@@ -11,11 +11,11 @@
 <div class="main-container">
   <div class="card-finding-show">
     <div class="welcome-items-card">
-      <h1>Thank you for scanning!</h1>
+      <h1>Thanks, you found <%= @item.user.first_name %>'s <%= @item.name %>!</h1>
       <hr class="green mb-4">
-      <p><em>You're a real Robinhood</em></p>
-      <h3 class="opacity-h3">This <%= @item.name %> is tagged with a QR code so it can be returned to its owner</h3>
-      <p class="m-0"><em>Follow The Steps</em></p>
+      <p>You're a real Robinhood</p>
+      <h3 class="opacity-h3">Now, please help it find it's way home</h3>
+      <p class="m-0">Follow The Steps</p>
       <div class="page-scroll text-center">
           <a href="#section07" class="btn btn-circle" id="finders-page">
             <i class="fa fa-angle-down fa-2x animated"></i>
