@@ -19,13 +19,9 @@
         <% if user_signed_in? %>
           <li class="nav-item dropdown mr-5">
             <i class="fas fa-bell dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-            <% current_user.items.each do |item| %>
-              <% item.findings.each do |finding| %>
-                <% if finding.state == "pending" %>
-                  <i class="fas fa-bullseye"></i>
-                <% end %>
+              <% if current_user.pending_findings? %>
+                <i class="fas fa-bullseye"></i>
               <% end %>
-            <% end %>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               <% if current_user.pending_findings? %>
                 <% current_user.pending_findings.each do |finding| %>
