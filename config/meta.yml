@@ -1,0 +1,5 @@
+meta_product_name: "RobinGood | Give Back. Get Back."
+meta_title: "Product name - Product tagline"
+meta_description: "Easily return and retrieve lost items using QR technology"
+meta_image: "facebook_image.png" # should exist in `app/assets/images/`
+twitter_account: "@getrobingood"   # required for Twitter Cards
