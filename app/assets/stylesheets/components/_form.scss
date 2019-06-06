@@ -94,4 +94,9 @@
   color: white;
 }
 
-
+#edit-profile {
+  margin: none;
+  @include media-breakpoint-up(sm) {
+    margin: 0 180px;
+  }
+}
