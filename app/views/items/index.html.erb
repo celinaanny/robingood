@@ -11,11 +11,10 @@
       <% end %>
     </div>
     <h4 class="mt-3 mb-5">@ <%= @user.user_name %></h4>
-   <p class="d-flex text-center"> <%= current_user.first_name %> <%= current_user.last_name %></p>
-   <p class="d-flex text-center"> <%= current_user.email %></p>
+   <p class="d-flex justify-content-center"> <%= current_user.first_name %> <%= current_user.last_name %></p>
    <div>
       <h1 class="mt-4 mb-5">
-        <%= link_to "Add a new item", new_item_path, class:"form-btn", style:"background-color: #ED3371;" %>
+        <%= link_to "Add item", new_item_path, class:"form-btn", style:"background-color: #ED3371;" %>
       </h1>
       <div>
         <% if @user.codes.last.item %>
