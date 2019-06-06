@@ -3,7 +3,7 @@
   <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
     <source src="https://res.cloudinary.com/dvmvunyrt/video/upload/v1559655198/Aerial_Shot_Of_City_1_qmk8tg.mp4" type="video/mp4">
   </video>
-  <div class="container h-100">
+  <div class="container h-100" id="section001">
     <div class="d-flex h-100 text-center align-items-center">
       <div class="w-100 text-white">
         <h1 class="h1_small">RobinGood</h1>
@@ -46,20 +46,20 @@
     <div class= "row mb-5">
       <div class="col">
         <div class="card-square">
-          <%= cl_image_tag("order_final_cuayrp", height: 180, crop: :fill) %>
+          <%= cl_image_tag("order_final_cuayrp", height: 180, crop: :fill, class: "img-fluid") %>
           <p class="mt-5"><strong class="highlighted highlighted-green">Step 1</strong> Order free QR codes</p>
         </div>
       </div>
       <div class="col">
         <div class="card-square">
-          <%= cl_image_tag("place_final_g8qfav", height: 180, crop: :fill) %>
+          <%= cl_image_tag("place_final_g8qfav", height: 180, crop: :fill, class: "img-fluid") %>
           <p class="mt-5"><strong class="highlighted highlighted-green">Step 2</strong> Place on your item</p>
         </div>
       </div>
       <div class="col">
         <div class="card-square">
-          <%= cl_image_tag("getback_final_zt57az", height: 180, crop: :fill) %>
-          <p class="mt-5"><strong class="highlighted highlighted-green">Step 3</strong> Get your item back</p>
+          <%= cl_image_tag("getback_final_zt57az", height: 180, crop: :fill, class: "img-fluid") %>
+          <p class="mt-5"><strong class="highlighted highlighted-green">Step 3</strong> Get your lost item back</p>
         </div>
       </div>
     </div>
@@ -74,31 +74,36 @@
     </div>
     <div class= "row mb-5">
       <div class="col">
-          <%= link_to "https://www.sos-kinderdorf.de/kinderdorf-berlin" do %>
+          <%= link_to "https://www.sos-kinderdorf.de/kinderdorf-berlin", target: :_blank do %>
             <div class="card-square">
-              <%= cl_image_tag "children_u57ztc", style: "height: 220px; width: 220px; margin-bottom: 20px; border-radius: 5px;"%>
+              <%= cl_image_tag("children_u57ztc", class: "img-fluid mb-4", height: 180, width: 180, crop: :fill) %>
               <p>SOS Child Support</p>
             </div>
           <%end%>
       </div>
 
       <div class="col">
-        <%= link_to "https://www.samtpfoten-neukoelln.com/" do %>
+        <%= link_to "https://www.samtpfoten-neukoelln.com/", target: :_blank do %>
           <div class="card-square">
-           <%= cl_image_tag "animal_shelter_ks8typ", style: "height: 220px; width: 220px; margin-bottom: 20px; border-radius: 5px;"%>
+            <%= cl_image_tag("animal_shelter_ks8typ", class: "img-fluid mb-4", height: 180, width: 180, crop: :fill) %>
            <p>Animal Shelter Berlin</p>
           </div>
         <%end%>
       </div>
 
       <div class="col">
-       <%= link_to "https://www.vabali.de/" do %>
+       <%= link_to "https://www.vabali.de/", target: :_blank do %>
         <div class="card-square">
-          <%= cl_image_tag "mia-help_otix1a", style: "height: 220px; width: 220px; margin-bottom: 20px; border-radius: 5px;"%>
+          <%= cl_image_tag("mia-help_otix1a", class: "img-fluid mb-4", height: 180, width: 180, crop: :fill) %>
           <p>Coding Bootcamp Rehab</p>
         </div>
        <%end%>
       </div>
+    </div>
+    <div class="page-scroll text-center">
+      <a href="#section001" class="btn btn-circle">
+        <i class="fa fa-angle-up fa-2x animated"></i>
+      </a>
     </div>
   </div>
 
