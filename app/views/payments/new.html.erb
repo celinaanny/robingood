@@ -25,7 +25,8 @@
               data-currency="eur"
               ></script>
           </div>
-          <article><%= cl_image_tag("children_u57ztc", class: "img-fluid mb-4", height: 280, width: 280, crop: :fill) %></article>
+
+          <article><%= cl_image_tag(@finding.cause.image, class: "img-fluid mb-4", height: 280, width: 280, crop: :fill) %></article>
         <% end %>
       </div>
     </div>
