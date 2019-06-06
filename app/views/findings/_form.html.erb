@@ -6,7 +6,7 @@
       <div class="finding-items-card">
         <h1><i class="fas fa-map-marker-alt"></i></h1>
         <h3><strong class="highlighted-red">Drop <%= @item.name %> off</strong> <strong class="opacity-h3">at a secure location</strong></h3>
-          <%= f.input :address, label: false, placeholder: "enter dropoff location (e.g. Starbucks)" %>
+          <%= f.input :address, label: false, placeholder: "dropoff location (e.g. Starbucks)" %>
           <div class="page-scroll text-center">
           <a href="#section08" class="btn btn-circle" id="finders-page">
             <i class="fa fa-angle-down fa-2x animated"></i>
@@ -31,7 +31,7 @@
                   <label id='label-1' class="collection_check_boxes" for="finding_cause_id_1">
                      <div class="cause-card-contents">
                        <i class="fas fa-heart"></i>
-                       <p>SOS Child Support/p>
+                       <p>SOS Child Support</p>
                      </div>
                   </label>
                 </div>
@@ -57,7 +57,7 @@
             </div>
           </fieldset>
         </div>
-        <%= f.input :message, label: false, placeholder: "Leave an optional message (e.g. left with Alberto)" %>
+        <%= f.input :message, label: false, placeholder: "additional dropoff info for owner" %>
         <%= f.button :submit,"Submit", id:"finding-form-btn"%>
       </div>
     </div>
