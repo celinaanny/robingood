@@ -5,7 +5,9 @@
       </div>
       <div class="finding-items-card">
         <h1><i class="fas fa-map-marker-alt"></i></h1>
-        <h3><strong class="highlighted-red">Drop <%= @item.name %> off</strong> <strong class="opacity-h3">at a secure location</strong></h3>
+        <h3><strong class="highlighted-red">Drop <%= @item.name %> off</strong>
+        <br>
+        <strong class="opacity-h3">at a secure location</strong></h3>
           <%= f.input :address, label: false, placeholder: "dropoff location (e.g. Starbucks)" %>
           <div class="page-scroll text-center">
           <a href="#section08" class="btn btn-circle" id="finders-page">
@@ -20,7 +22,9 @@
         <h1>2</h1>
       </div>
       <div class="finding-items-card">
-        <h3><strong class="highlighted-red">Select a cause</strong><strong class="opacity-h3"> for the owner to donate to</strong></h3>
+        <h3><strong class="highlighted-red">Select a cause</strong>
+          <br>
+          <strong class="opacity-h3"><%= @item.user.first_name %> will give to</strong></h3>
         <div class="checkboxes">
           <fieldset class="form-group check_boxes optional finding_cause_id">
             <legend class="col-form-label pt-0"></legend>
@@ -57,7 +61,7 @@
             </div>
           </fieldset>
         </div>
-        <%= f.input :message, label: false, placeholder: "additional dropoff info for owner" %>
+        <%= f.input :message, label: false, placeholder: "additional info for #{@item.user.first_name}" %>
         <%= f.button :submit,"Submit", id:"finding-form-btn"%>
       </div>
     </div>
