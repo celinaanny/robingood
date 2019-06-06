@@ -12,12 +12,14 @@ import { addressSelect } from "./mark_address";
 import { addClassToAddressBox } from "./mark_address";
 import { initAutocomplete } from '../plugins/init_autocomplete';
 import { init_notification } from './notification';
+import { cog_rotation } from './cog-rotation';
 
 addAttributesToQRCode();
 initAutocomplete();
 initMapbox();
 init_notification();
 addAttributesToRect();
+cog_rotation();
 
 if (document.querySelector("#address-send-congrats")) {
   sendCongrats('#address-send-congrats', {
