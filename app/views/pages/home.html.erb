@@ -74,22 +74,30 @@
     </div>
     <div class= "row mb-5">
       <div class="col">
-        <div class="card-square">
-          <i class="fas fa-heart"></i>
-          <p>Cause 1</p>
-        </div>
+          <%= link_to "https://www.sos-kinderdorf.de/kinderdorf-berlin" do %>
+            <div class="card-square">
+              <%= cl_image_tag "children_u57ztc", style: "height: 220px; width: 220px; margin-bottom: 20px; border-radius: 5px;"%>
+              <p>SOS Child Support</p>
+            </div>
+          <%end%>
       </div>
+
       <div class="col">
-        <div class="card-square">
-          <i class="fas fa-dog"></i>
-          <p>Cause 2</p>
-        </div>
+        <%= link_to "https://www.samtpfoten-neukoelln.com/" do %>
+          <div class="card-square">
+           <%= cl_image_tag "animal_shelter_ks8typ", style: "height: 220px; width: 220px; margin-bottom: 20px; border-radius: 5px;"%>
+           <p>Animal Shelter Berlin</p>
+          </div>
+        <%end%>
       </div>
+
       <div class="col">
+       <%= link_to "https://www.vabali.de/" do %>
         <div class="card-square">
-          <i class="fas fa-stethoscope"></i>
-          <p>Cause 3</p>
+          <%= cl_image_tag "mia-help_otix1a", style: "height: 220px; width: 220px; margin-bottom: 20px; border-radius: 5px;"%>
+          <p>Coding Bootcamp Rehab</p>
         </div>
+       <%end%>
       </div>
     </div>
   </div>
