@@ -19,7 +19,7 @@
           </div>
           <div class="d-flex" id="marker-finding">
             <% item.findings.each do |finding| %>
-              <% if finding.state == "pending" || true %>
+              <% if finding.state == "pending" %>
                 <%= link_to finding_path(finding), class: 'btn btn-outline-primary' do %>
                   <span>Item found</span>
                     <i class="fas fa-map-marker-alt"></i>
