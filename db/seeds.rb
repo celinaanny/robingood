@@ -22,9 +22,9 @@ Cause.destroy_all
 
 puts "Creating causes..."
 
-Cause.create!(name: "SOS Child Support Berlin", image: "https://res.cloudinary.com/dmsw1yn6c/image/upload/v1559810614/children_u57ztc.jpg", description: "Good")
-Cause.create!(name: "Animal Shelter Berlin-Neukölln", image: "https://res.cloudinary.com/dmsw1yn6c/image/upload/v1559810562/animal_shelter_ks8typ.jpg", description: "Good")
-Cause.create!(name: "Coding Bootcamp Rehab", image: "https://res.cloudinary.com/dmsw1yn6c/image/upload/v1559811240/mia-help_otix1a.png", description: "Good")
+Cause.create!(id: 1, name: "SOS Child Support Berlin", image: "https://res.cloudinary.com/dmsw1yn6c/image/upload/v1559810614/children_u57ztc.jpg", description: "Good")
+Cause.create!(id: 2, name: "Animal Shelter Berlin-Neukölln", image: "https://res.cloudinary.com/dmsw1yn6c/image/upload/v1559810562/animal_shelter_ks8typ.jpg", description: "Good")
+Cause.create!(id: 3, name: "Coding Bootcamp Rehab", image: "https://res.cloudinary.com/dmsw1yn6c/image/upload/v1559811240/mia-help_otix1a.png", description: "Good")
 
 puts "Causes created"
 # puts "Create Items..."
